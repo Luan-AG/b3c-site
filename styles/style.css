@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    background-color: #cccccc;
+    background-image: url(../images/wallpaper.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+    header{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+        nav{
+            border-bottom-left-radius: 60%;
+            border-bottom-right-radius: 10px;
+            margin-right: 30px;
+            background-color: #ffffff;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            justify-items: center;
+            gap: 10px;
+            position: fixed; /* Sticky/fixed navbar */
+            width: 98%;
+            
+            
+             
+        }
+            nav a {
+                text-decoration: none;
+                padding: 5px 10px;
+                color: black;
+                transition: 0.4s;
+                
+                
+            }
+                #active {
+                    color:  #fbca4a;
+                    border-bottom: 4px solid #fbca4a;
+                    padding: 5px 10px;
+                    border-radius: 5px;  
+                }
+
+                nav a:visited {
+                    font-style: none;
+                }
+
+                nav a:hover {
+                    color:  grey;
+                    border-bottom: 4px solid #fbca4a;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                }
+
+            .logomarca {
+                margin-left: 50px;
+                width: 150px;
+                border-radius: 5px;
+                grid-column: 1/4;
+                transition: 0.4s;
+            }
+
+            .container-btn {
+                grid-column: 5/11;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+                .btn-barra-nav {
+                   padding: 5px 10px;
+                   border-radius: 5px;
+                }
+
+/*-------------Select button for changing the language---------*/
+
+            .custom-select {
+                margin-right: 10px;
+                width: 42px;
+                grid-column: 12/13;
+                position: relative;
+            }
+
+                .custom-select select {
+                    display: none; /*hide original SELECT element: */
+                }
+                
+
+                .select-selected {
+                    background-color: #80808083;
+                    border-radius: 5px;
+                }
+                
+                .select-selected:after { /* Style the arrow inside the select element: */
+                    position: absolute;
+                    content: "";
+                    top: 11px;
+                    right: 4px;
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-color: #fff transparent transparent transparent;
+                }
+
+                .select-selected.select-arrow-active:after {/* Point the arrow upwards when the select box is open (active): */
+                    border-color: transparent transparent #fff transparent;
+                    top: 7px;
+                }
+
+                .select-items div,.select-selected { /* style the items (options), including the selected item: */
+                    color: #ffffff;
+                    padding: 4px 4px;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                }
+
+                .select-items { /* Style items (options): */
+                    position: absolute;
+                    background-color: #808080;
+                    border-radius: 5px;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    z-index: 99;
+                }
+                
+                .select-hide { /* Hide the items when the select box is closed: */
+                    display: none;
+                }
+                
+                .select-items div:hover, .same-as-selected {
+                    background-color: rgba(0, 0, 0, 0.4);
+                    border-radius: 5px;
+                }
+/*----------------Menu hamburger-------------------------*/
+            .hamburger-menu {
+                grid-column: 10/13;
+                display: none;
+            }
+
+            .overlay {
+                /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+                height: 100%;
+                width: 0;
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                right: 0;
+                top: 0;
+                background-color: rgba(36, 35, 35, 0.9); /* Black w/opacity */
+                overflow-x: hidden; /* Disable horizontal scroll */
+                transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+            }
+            
+            /* Position the content inside the overlay */
+            .overlay-content {
+                position: relative;
+                top: 25%; /* 25% from the top */
+                width: 100%; /* 100% width */
+                text-align: center; /* Centered text/links */
+                margin-top: 0px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+            }
+            
+            /* The navigation links inside the overlay */
+            .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                color: #818181;
+                display: block; /* Display block instead of inline */
+                transition: 0.3s; /* Transition effects on hover (color) */
+            }
+            
+            /* When you mouse over the navigation links, change their color */
+            .overlay a:hover, .overlay a:active {
+                color: #fbca4a;
+            }
+            
+            /* Position the close button (top right corner) */
+            .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+            }
+
+
+    main {
+        height: 3000px;
+    }
+
+
+
+@media only screen and (max-width: 768px) {
+
+    nav{
+        border-bottom-left-radius: 70%;
+        margin-right: 15px;
+    }
+
+    .container-btn {
+        display: none;
+    }
+
+    .custom-select {
+        display: none;
+    }
+
+        nav a:hover {
+            color: black;
+            border-bottom: none;
+           
+        }
+
+        .logomarca {
+            width: 100px;
+        }
+
+    .hamburger-menu {
+        display: flex;
+        border-radius: 10px;
+    }
+
+        .hamburger-menu a {
+            display: flex;
+            padding:0px 10px;
+            
+        }
+
+        .hamburger-menu a:hover {
+            display: flex;
+            padding:0px 10px;
+            
+        }
+
+        .hamburger-menu img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .hamburger-menu p {
+            margin-right: 0px;
+        }
+
+    .hamburger-menu:hover, .hamburger-menu:active {
+        background-color: rgba(54, 54, 54, 0.2);
+        padding: 0px;
+    }
+
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+    

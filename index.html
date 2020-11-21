@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/logo-aba.png">
+    <title>B3C Int.</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo3.png" class="logomarca" alt="logomarca">
+            <div class="container-btn">
+                <div class="btn-barra-nav inicio" id="active"><a href="#">Início</a></div>
+                <div class="btn-barra-nav sobre"><a href="#">Sobre</a></div>
+                <div class="btn-barra-nav serviços"><a href="#">Serviços</a></div>
+                <div class="btn-barra-nav parceiros"><a href="#">Parceiros</a></div>
+                <div class="btn-barra-nav contato"><a href="#">Contato</a></div>
+            </div> 
+            <div class="custom-select">
+                <select class="select-dropdown">
+                    <option value="0">PT</option>
+                    <option value="1">EN</option>
+                    <option value="2">ES</option>
+                    <option value="3">PT</option>
+                </select>
+            </div>
+            <div class="hamburger-menu">
+                <a href="javascript:void(0)" onclick="openNav()"><img src="images/hamburger.svg" alt="menu"><p>MENU</p></a>
+            </div>
+            <div class="overlay" id="myNav">
+                <div class="overlay-content">
+                    <div class="btn-barra-nav inicio"><a href="javascript:void(0)">Início</a></div>
+                    <div class="btn-barra-nav sobre"><a href="javascript:void(0)">Sobre</a></div>
+                    <div class="btn-barra-nav serviços"><a href="javascript:void(0)">Serviços</a></div>
+                    <div class="btn-barra-nav parceiros"><a href="javascript:void(0)">Parceiros</a></div>
+                    <div class="btn-barra-nav contato"><a href="javascript:void(0)">Contato</a></div>
+                </div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div> 
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
