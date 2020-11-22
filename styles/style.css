@@ -13,6 +13,7 @@ body {
     header{
         font-size: 16px;
         font-weight: 500;
+        height: 200px;
     }
 
         nav{
@@ -194,6 +195,24 @@ body {
         height: 3000px;
     }
 
+        .slide-area {
+            height: 600px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+        }
+    
+            .slide-container {
+                grid-column: 2/12;
+                height: 400px;
+                border: 2px solid white;
+                border-radius: 10px;
+                background-image: url(../images/lauching.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain; /*resize the picture to fit in the box*/
+
+            }
 
 
 @media only screen and (max-width: 768px) {
