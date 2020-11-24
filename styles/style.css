@@ -300,8 +300,9 @@ body {
 @media only screen and (max-width: 768px) {
 
     nav{
-        border-bottom-left-radius: 70%;
         margin-right: 15px;
+        grid-template-rows: 70px;
+        height: 70px;
     }
 
     .container-btn {
@@ -319,7 +320,7 @@ body {
         }
 
         .logomarca {
-            width: 100px;
+            width: 110px;
         }
 
     .hamburger-menu {
