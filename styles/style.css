@@ -144,6 +144,7 @@ body {
             .hamburger-menu {
                 grid-column: 10/13;
                 display: none;
+                
             }
 
             .overlay {
@@ -290,6 +291,8 @@ body {
                 transition: ease-in-out 0.2s;
             }
 
+            
+
 @media only screen and (max-width: 768px) {
 
     nav{
@@ -317,11 +320,14 @@ body {
 
     .hamburger-menu {
         display: flex;
+        align-items: center;
         border-radius: 10px;
+        
     }
 
         .hamburger-menu a {
             display: flex;
+            align-items: center; /*correct bug in the nav for safari and ios mobile*/
             padding:0px 10px;
             
         }
@@ -359,6 +365,11 @@ body {
     font-size: 40px;
     top: 15px;
     right: 35px;
+    }
+
+    .hamburger-menu a {
+        margin-right: 30px; /*adjust the menu icon for mobile*/
+        
     }
 }
     
