@@ -97,10 +97,14 @@ function closeNav() {
 window.onscroll = function() {;
     if(window.screen.width > 768){
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                document.querySelector(".logomarca").style.width = "100px";
+                document.querySelector(".logomarca").style.width = "110px";
+                document.querySelector("nav").style.height = "70px";
+                document.querySelector("nav").style.gridTemplateRows = "70px";
                 document.querySelector("header").style.fontSize = "14px";
         } else {
-                document.querySelector(".logomarca").style.width = "150px";
+                document.querySelector(".logomarca").style.width = "140px";
+                document.querySelector("nav").style.height = "100px";
+                document.querySelector("nav").style.gridTemplateRows = "100px";
                 document.querySelector("header").style.fontSize = "16px";
         }
     }
