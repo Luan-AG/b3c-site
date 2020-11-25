@@ -30,20 +30,16 @@ body {
             position: fixed; /* Sticky/fixed navbar */
             width: 98%;
             height: 100px; /*Had to put this for smooth transition because just changing grid the transition is not smooth*/
-            transition: 0.4s;
-            
-            
-             
+            transition: 0.4s;     
         }
-            nav a {
+            
+        nav a {
                 text-decoration: none;
                 padding: 5px 10px;
                 color: black;
-                transition: 0.2s;
-                
-                
-                
+                transition: 0.4s;
             }
+
                 #active {
                     color:  #fbca4a;
                     border-bottom: 4px solid #fbca4a;
@@ -97,7 +93,6 @@ body {
                     display: none; /*hide original SELECT element: */
                 }
                 
-
                 .select-selected {
                     background-color: #80808083;
                     border-radius: 5px;
@@ -144,6 +139,7 @@ body {
                     background-color: rgba(0, 0, 0, 0.4);
                     border-radius: 5px;
                 }
+
 /*----------------Menu hamburger-------------------------*/
             .hamburger-menu {
                 grid-column: 10/13;
@@ -272,6 +268,8 @@ body {
                 position: absolute;
                 top: 360px;
                 left: 10%;
+                z-index: 1;
+                
             }
             
             a#next  {
@@ -280,7 +278,9 @@ body {
                 color: rgba(255, 255, 255, 0.8);
                 position: absolute;
                 top: 360px;
-                right: 10%;               
+                right: 10%;
+                z-index: 1;
+                              
             }
 
             a#prev p, a#next p {
@@ -294,8 +294,6 @@ body {
                 color: rgba(31, 31, 31, 0.8);
                 transition: ease-in-out 0.2s;
             }
-
-            
 
 @media only screen and (max-width: 768px) {
 

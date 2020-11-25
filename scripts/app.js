@@ -82,14 +82,18 @@ document.addEventListener("click", closeAllSelect); //If the user clicks anywher
 
 //------------------OVERLAY EFFECT---------------------------------
 
-/* Open when someone clicks on the span element */
+/* Open when someone clicks on the menu element */
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
+    document.querySelector('#next').style.color = "rgba(36, 35, 35, 0)";
+    document.querySelector('#prev').style.color = "rgba(36, 35, 35, 0)";
   }
   
   /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
+    document.querySelector('#next').style.color = " rgba(255, 255, 255, 0.8)";
+    document.querySelector('#prev').style.color = " rgba(255, 255, 255, 0.8)";
   }
 
 //---------------SHRINK NAVBAR-------------------------------------
