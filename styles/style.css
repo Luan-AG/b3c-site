@@ -22,7 +22,7 @@ body {
             margin-right: 30px;
             background-color: #ffffff;
             display: grid;
-            grid-template-rows: 100px;
+            grid-template-rows: auto;
             grid-template-columns: repeat(12, 1fr);
             align-items: center;
             justify-items: center;
@@ -30,14 +30,18 @@ body {
             position: fixed; /* Sticky/fixed navbar */
             width: 98%;
             height: 100px; /*Had to put this for smooth transition because just changing grid the transition is not smooth*/
-            transition: 0.4s;     
+            transition-duration: 0.4s;
+            transition-property: all;
+             
         }
             
         nav a {
                 text-decoration: none;
                 padding: 5px 10px;
                 color: black;
-                transition: 0.4s;
+                transition-property: color;
+                transition-duration:  .4s;
+                
             }
 
                 #active {
@@ -264,30 +268,32 @@ body {
             a#prev {
                 text-decoration: none;
                 padding-bottom: 10px;
-                color: rgba(255, 255, 255, 0.8);
+                color: rgba(255, 255, 255, 0.4);
                 position: absolute;
                 top: 360px;
                 left: 10%;
                 z-index: 1;
+                transition-property: color;
+                transition-duration: 0.4s;
                 
             }
             
             a#next  {
                 text-decoration: none;
                 padding-bottom: 10px;
-                color: rgba(255, 255, 255, 0.8);
+                color: rgba(255, 255, 255, 0.4);
                 position: absolute;
                 top: 360px;
                 right: 10%;
                 z-index: 1;
-                              
+                transition-property: color;
+                transition-duration: 0.1s;
             }
 
             a#prev p, a#next p {
                 font-size: 50px;
                 margin: 0;
                 padding: 0;
-                
             }
 
             a#prev:hover, a#next:hover {
@@ -295,11 +301,51 @@ body {
                 transition: ease-in-out 0.2s;
             }
 
+    footer {
+        background-color: rgb(19, 19, 19);
+        height: auto;
+        width: 98%;
+        border-top-right-radius: 20px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+        
+
+        footer .adress {
+            margin: 0;
+            padding-left: 0;
+            grid-column: 1/4;
+            grid-row: 2;
+            color: rgba(167, 165, 165, 0.5);
+            font-size: 12px;
+         
+        }
+            img.logo-footer{
+                grid-row: 1;
+                grid-column: 5/9;
+                width: 80px;
+                margin: 10px;
+                border-radius: 5px;
+            }
+
+            .pin-adress{
+                display: flex;
+                justify-content: left;
+            }
+
+            footer h2 {
+                font-size: 16px;
+                margin-left: 10px;
+            }
+
 @media only screen and (max-width: 768px) {
 
     nav{
         margin-right: 15px;
-        grid-template-rows: 70px;
+        
         height: 70px;
     }
 
@@ -361,18 +407,19 @@ body {
     }
 
 }
+@media only screen and (max-width: 450px) {
+    .hamburger-menu  {
+        margin-right: 20px; /*adjust the menu icon for mobile*/
+        
+    }
+}
 
-@media screen and (max-height: 450px) {
+@media only screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
-    }
-
-    .hamburger-menu a {
-        margin-right: 30px; /*adjust the menu icon for mobile*/
-        
-    }
+    } 
 }
     

@@ -84,16 +84,21 @@ document.addEventListener("click", closeAllSelect); //If the user clicks anywher
 
 /* Open when someone clicks on the menu element */
 function openNav() {
+    document.querySelector('#next').style.transitionDelay = "0s";
     document.getElementById("myNav").style.width = "100%";
     document.querySelector('#next').style.color = "rgba(36, 35, 35, 0)";
     document.querySelector('#prev').style.color = "rgba(36, 35, 35, 0)";
+    
   }
   
   /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
+    document.querySelector('#next').style.transitionDelay = "0.3s";
     document.getElementById("myNav").style.width = "0%";
     document.querySelector('#next').style.color = " rgba(255, 255, 255, 0.8)";
     document.querySelector('#prev').style.color = " rgba(255, 255, 255, 0.8)";
+    
+    
   }
 
 //---------------SHRINK NAVBAR-------------------------------------
@@ -103,12 +108,10 @@ window.onscroll = function() {;
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
                 document.querySelector(".logomarca").style.width = "110px";
                 document.querySelector("nav").style.height = "70px";
-                document.querySelector("nav").style.gridTemplateRows = "70px";
                 document.querySelector("header").style.fontSize = "14px";
         } else {
                 document.querySelector(".logomarca").style.width = "140px";
                 document.querySelector("nav").style.height = "100px";
-                document.querySelector("nav").style.gridTemplateRows = "100px";
                 document.querySelector("header").style.fontSize = "16px";
         }
     }
