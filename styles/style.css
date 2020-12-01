@@ -209,7 +209,7 @@ body {
 /*----------------Slide show-------------------------*/    
         .slider {
             margin-top: -150px;
-            height: 700px; /* Change this parameter to adjust the slide size according to the screen-size */
+            height: 650px; /* Change this parameter to adjust the slide size according to the screen-size */
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
@@ -222,7 +222,7 @@ body {
 
         .slide {
             grid-column: 1/13;
-            height: 700px; /* And also Change this parameter to adjust the slide size according to the screen-size */
+            height: 650px; /* And also Change this parameter to adjust the slide size according to the screen-size */
             width: 100%;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -559,7 +559,7 @@ body {
         padding-bottom: 10px;
         color: rgba(255, 255, 255, 0.4);
         position: absolute;
-        top: 700px;
+        top: 650px;
         left: 50px;
         z-index: 1;
         transition-property: color;
@@ -572,7 +572,7 @@ body {
         padding-bottom: 10px;
         color: rgba(255, 255, 255, 0.4);
         position: absolute;
-        top: 700px;
+        top: 650px;
         right: 50px;
         z-index: 1;
         transition-property: color;
@@ -643,8 +643,9 @@ body {
         }
         
 
-    }
 }
+
+
 @media only screen and (max-width: 450px) {
     .hamburger-menu  {
         margin-right: 20px; /*adjust the menu icon for mobile*/
@@ -654,14 +655,18 @@ body {
     .section-sobre .texto-sobre {
         grid-row: 1;
         grid-column: 1/13;
+    }
 }
 
 @media only screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
+    .overlay a {
+        font-size: 20px
+    }
+
     .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     } 
 }
     
