@@ -38,6 +38,7 @@ body {
             height: 100px; /*Had to put this for smooth transition because just changing grid the transition is not smooth*/
             transition-duration: 0.4s;
             transition-property: all;
+            z-index: 2;
              
         }
             
@@ -596,6 +597,7 @@ body {
     a#prev:hover, a#next:hover {
         color: rgba(255, 255, 255, 0.8); /*so the button does not keep hovered on the phone*/
         background-color: none;
+        
     }
 
     .section-sobre .texto-sobre {
