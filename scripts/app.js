@@ -106,16 +106,33 @@ function closeNav() {
 window.onscroll = function() {;
     if(window.screen.width > 768){
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                document.querySelector(".logomarca").style.width = "110px";
-                document.querySelector("nav").style.height = "70px";
-                document.querySelector("header").style.fontSize = "14px";
-        } else {
+              document.querySelector(".logomarca").style.width = "110px";
+              document.querySelector("nav").style.height = "70px";
+              document.querySelector("header").style.fontSize = "14px";
+        }
+
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+              document.querySelector(".texto-sobre").style.opacity = "1";
+              document.querySelector(".texto-sobre").style.marginTop = "0";
+        }
+        
+        else {
                 document.querySelector(".logomarca").style.width = "140px";
                 document.querySelector("nav").style.height = "100px";
                 document.querySelector("header").style.fontSize = "16px";
         }
     }
 }
+
+//---------------Appear on scroll section sobre-------------------------------------
+/* window.onscroll = function() {;
+    
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                document.querySelector(".texto-sobre").style.opacity = "1";
+                document.querySelector(".texto-sobre").style.marginTop = "0";
+        } 
+    }
+ */
 
 //---------------SLIDESHOW-------------------------------------
 
