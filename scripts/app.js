@@ -101,7 +101,7 @@ function closeNav() {
     
   }
 
-//---------------SHRINK NAVBAR-------------------------------------
+//---------------SHRINK NAVBAR & Appear on scroll section sobre-------------------------------------
 
 window.onscroll = function() {;
     if(window.screen.width > 768){
@@ -109,18 +109,20 @@ window.onscroll = function() {;
               document.querySelector(".logomarca").style.width = "110px";
               document.querySelector("nav").style.height = "70px";
               document.querySelector("header").style.fontSize = "14px";
-        }
-
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-              document.querySelector(".texto-sobre").style.opacity = "1";
-              document.querySelector(".texto-sobre").style.marginTop = "0";
-        }
-        
-        else {
+              if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                document.querySelector(".texto-sobre").style.opacity = "1";
+                document.querySelector(".texto-sobre").style.marginTop = "0";
+                }
+        } else {
                 document.querySelector(".logomarca").style.width = "140px";
                 document.querySelector("nav").style.height = "100px";
                 document.querySelector("header").style.fontSize = "16px";
         }
+    } else {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.querySelector(".texto-sobre").style.opacity = "1";
+                document.querySelector(".texto-sobre").style.marginTop = "0";
+                }
     }
 }
 

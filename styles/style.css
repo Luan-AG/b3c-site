@@ -1,3 +1,4 @@
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +20,7 @@ body {
     header{
         font-size: 16px;
         font-weight: 500;
-        height: 200px;
+        height: 150px;
     }
 
         nav{
@@ -207,57 +208,76 @@ body {
 
 /*----------------Slide show-------------------------*/    
         .slider {
-            height: 400px;
+            margin-top: -150px;
+            height: 700px; /* Change this parameter to adjust the slide size according to the screen-size */
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
             position: relative;
             overflow: hidden;
             z-index: -1;
+            
+            
         }
 
         .slide {
-            grid-column: 2/12;
-            height: 392px;
+            grid-column: 1/13;
+            height: 700px; /* And also Change this parameter to adjust the slide size according to the screen-size */
             width: 100%;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
             position: absolute;
             opacity: 0;
-            transition: 0.7s ease-in-out;
-            border: 4px solid #ffffff;
-            border-radius: 10px;
+            transition: 1.2s ease-in-out;
+            
+            
         }
+            .slide .content p {
+                font-size: 50px;
+                color: whitesmoke;
+                width: 1000px;
+            }
     
             .slide.current {
                 opacity: 1;
             }
 
                 .slide:first-child {
-                    background: url('../images/lauching.jpg') no-repeat center top/cover;
-                    background-size: contain;
-                    background-color:  #fbca4a;
+                    background-image: url('../images/slide-1.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
                 }
+
                 .slide:nth-child(2) {
-                    background: url('../images/howitworks.png') no-repeat center top/cover;
-                    background-size: contain;
-                    background-color:  #fbca4a;
+                    background-image: url('../images/slide-2.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
                 }
                 .slide:nth-child(3) {
-                    background: url('../images/revisao.png') no-repeat center top/cover;
-                    background-size: contain;
-                    background-color:  #fbca4a;
+                    background-image: url('../images/slide-3.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
                 }
                 .slide:nth-child(4) {
-                    background: url('../images/whatwedo.png') no-repeat center top/cover;
-                    background-size: contain;
-                    background-color:  #fbca4a;
+                    background-image: url('../images/slide-4.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
                 }
                 .slide:nth-child(5) {
-                    background: url('../images/outstanding.png') no-repeat center top/cover;
-                    background-size: contain;
-                    background-color:  #fbca4a;
+                    background-image: url('../images/slide-5.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
                 }
 
             .content-slide {
@@ -275,11 +295,12 @@ body {
                 color: rgba(255, 255, 255, 0.4);
                 position: absolute;
                 top: 360px;
-                left: 10%;
+                left: 0;
                 z-index: 1;
                 transition-property: color;
-                transition-duration: 0.4s;
-                
+                transition-duration: 0.1s;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
             }
             
             a#next  {
@@ -288,28 +309,55 @@ body {
                 color: rgba(255, 255, 255, 0.4);
                 position: absolute;
                 top: 360px;
-                right: 10%;
+                right: 0;
                 z-index: 1;
                 transition-property: color;
                 transition-duration: 0.1s;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
             }
 
-            a#prev p, a#next p {
+            a#prev p {
                 font-size: 50px;
                 margin: 0;
-                padding: 0;
+                padding: 15px 20px 10px 15px;
+                
+            }
+
+            a#next p {
+                font-size: 50px;
+                margin: 0;
+                padding: 15px 15px 10px 20px;
             }
 
             a#prev:hover, a#next:hover {
-                color: rgba(31, 31, 31, 0.8);
-                transition: ease-in-out 0.2s;
+                background-color: rgba(36, 35, 35, 0.9);
+                
             }
+/*----------------Slide show dots-------------------------*/
+.dot-container {
+    text-align: center;
+}
 
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 25px 2px 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+  }
+  
+  .active-dot, .dot:hover {
+    background-color: #575555;
+  }
 
 /*----------------Section Sobre-------------------------*/
 
 .section-sobre {
-    margin-top: 180px;
+    margin-top: 100px;
     color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -446,7 +494,7 @@ body {
             font-size: 10px;
             text-align: center;
         }
-
+    
 @media only screen and (max-width: 768px) {
 
     nav{
@@ -506,9 +554,53 @@ body {
         padding: 0px;
     }
 
+    a#prev {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 700px;
+        left: 50px;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+    }
+    
+    a#next  {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 700px;
+        right: 50px;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+    }
+
+    a#prev p {
+        font-size: 40px;
+        margin: 0;
+        padding: 5px 20px 0px 15px;
+        
+    }
+
+    a#next p {
+        font-size: 40px;
+        margin: 0;
+        padding: 5px 15px 0px 20px;
+    }
+
     a#prev:hover, a#next:hover {
         color: rgba(255, 255, 255, 0.8); /*so the button does not keep hovered on the phone*/
-        
+        background-color: none;
+    }
+
+    .section-sobre .texto-sobre {
+        grid-row: 1;
+        grid-column: 2/12;
     }
 
     footer {
@@ -517,7 +609,7 @@ body {
         grid-template-rows: repeat(5, auto);
         align-items: center;
         justify-content: center;
-    }
+        }
             
         footer .logo-footer {
             grid-row: 1;
@@ -551,12 +643,17 @@ body {
         }
         
 
+    }
 }
 @media only screen and (max-width: 450px) {
     .hamburger-menu  {
         margin-right: 20px; /*adjust the menu icon for mobile*/
         
     }
+
+    .section-sobre .texto-sobre {
+        grid-row: 1;
+        grid-column: 1/13;
 }
 
 @media only screen and (max-height: 450px) {
