@@ -210,15 +210,13 @@ body {
 /*----------------Slide show-------------------------*/    
         .slider {
             margin-top: -150px;
-            height: 650px; /* Change this parameter to adjust the slide size according to the screen-size */
+            height: 650px; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
             position: relative;
             overflow: hidden;
             z-index: -1;
-            
-            
         }
 
         .slide {
@@ -228,17 +226,75 @@ body {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
+            align-items: flex-end;
+            justify-items: center;
             position: absolute;
             opacity: 0;
             transition: 1.2s ease-in-out;
             
             
         }
-            .slide .content p {
-                font-size: 50px;
-                color: whitesmoke;
-                width: 1000px;
+            .slide .content-left {
+                grid-row: 1;
+                grid-column: 1/7;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                margin-left: 100px;
+                margin-bottom: 100px;     
             }
+
+            .slide .content-right {
+                grid-row: 1;
+                grid-column: 7/13;
+                display: flex;
+                flex-direction: column;
+                align-items: right;
+                margin-right: 70px;
+                margin-bottom: 100px;     
+            }
+
+                .slide .content-left h2 {
+                    margin: 0;
+                    font-size: 50px;
+                    color: whitesmoke;
+                }
+
+                .slide .content-left p {
+                    padding-right: 100px;
+                    font-size: 14px;
+                    color: whitesmoke;
+                }
+
+                .slide .content-right h2 {
+                    text-align: right;
+                    margin: 0;
+                    font-size: 50px;
+                    color: whitesmoke;
+                }
+
+                .slide .content-right p {
+                    text-align: right;
+                    padding-left: 200px;
+                    font-size: 14px;
+                    color: whitesmoke;
+                }
+
+                /* .slide .content a {
+                    text-decoration: none;
+                    color: whitesmoke;
+                    border: 1px solid whitesmoke;
+                    width: 150px;
+                    margin-top: 20px;
+                    text-align: center;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+                
+                .slide .content a:hover {
+                    background-color: yellow;
+                } */
     
             .slide.current {
                 opacity: 1;
@@ -380,6 +436,7 @@ body {
             font-size: 50px;
             font-weight: normal;
             padding: 10px ;
+            margin-top: 0;
             text-align: center;
             
         }
@@ -555,6 +612,14 @@ body {
         padding: 0px;
     }
 
+    .slider {
+        height: 650px; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
+    }
+
+    .slide {
+        height: 650px; /* And also Change this parameter to adjust the slide size according to the screen-size */
+    }
+
     a#prev {
         text-decoration: none;
         padding-bottom: 10px;
@@ -599,6 +664,34 @@ body {
         background-color: none;
         
     }
+
+    .slide .content-left {
+        grid-column: 1/11;
+        margin-left: 50px;
+        margin-bottom: 50px;     
+    }
+
+    .slide .content-right {
+        grid-column: 3/13;
+        margin-right: 50px;
+        margin-bottom: 50px;     
+    }
+
+        .slide .content-left h2 {
+            font-size: 40px;
+        }
+
+        .slide .content-left p {
+            font-size: 14px;
+        }
+
+        .slide .content-right h2 {
+            font-size: 40px;
+        }
+
+        .slide .content-right p {
+            font-size: 14px;
+        }
 
     .section-sobre .texto-sobre {
         grid-row: 1;
@@ -654,10 +747,59 @@ body {
         
     }
 
+    .slide .content-left {
+        grid-column: 2/12;
+        margin-left: 20px;
+        margin-bottom: 50px;
+        margin-right: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px 15px 0px 15px;     
+    }
+
+    .slide .content-left h2 {
+        font-size: 30px;
+    }
+
+    .slide .content-left p {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+
+    .slide .content-right {
+        grid-row: 1;
+        grid-column: 2/12;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-left: 20px;
+        margin-bottom: 50px;
+        margin-right: 20px; 
+        background-color: rgba(0, 0, 0, 0.6); 
+        padding: 5px 15px 0px 15px;   
+    }
+
+        .slide .content-right h2 {
+            text-align: left;
+            margin: 0;
+            font-size: 30px;
+            color: whitesmoke;
+        }
+
+        .slide .content-right p {
+            text-align: left;
+            padding-right: 20px;
+            padding-left: 0px;
+            font-size: 14px;
+            color: whitesmoke;
+        }
+
+
     .section-sobre .texto-sobre {
         grid-row: 1;
         grid-column: 1/13;
     }
+
+
 }
 
 @media only screen and (max-height: 450px) {

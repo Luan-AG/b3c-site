@@ -109,7 +109,7 @@ window.onscroll = function() {;
               document.querySelector(".logomarca").style.width = "110px";
               document.querySelector("nav").style.height = "70px";
               document.querySelector("header").style.fontSize = "14px";
-              if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+              if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 document.querySelector(".texto-sobre").style.opacity = "1";
                 document.querySelector(".texto-sobre").style.marginTop = "0";
                 }
@@ -119,7 +119,7 @@ window.onscroll = function() {;
                 document.querySelector("header").style.fontSize = "16px";
         }
     } else {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 document.querySelector(".texto-sobre").style.opacity = "1";
                 document.querySelector(".texto-sobre").style.marginTop = "0";
                 }
@@ -142,7 +142,7 @@ const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const auto = true; // Auto slide
-const intervalTime = 5000;
+const intervalTime = 10000;
 let slideInterval;
 
 const nextSlide = () => {
