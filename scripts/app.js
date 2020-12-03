@@ -104,7 +104,7 @@ function closeNav() {
 //---------------SHRINK NAVBAR & Appear on scroll section sobre-------------------------------------
 
 window.onscroll = function() {;
-    if(window.screen.width > 768){
+    if(window.screen.width > 767){
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
               document.querySelector(".logomarca").style.width = "110px";
               document.querySelector("nav").style.height = "70px";
@@ -113,6 +113,26 @@ window.onscroll = function() {;
                 document.querySelector(".texto-sobre").style.opacity = "1";
                 document.querySelector(".texto-sobre").style.marginTop = "0";
                 }
+                if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                  document.querySelector(".texto-servicos").style.opacity = "1";
+                  document.querySelector(".texto-servicos").style.transform = "translate(0px, 0px)";
+                  document.querySelector(".servico-1").style.opacity = "1";
+                  document.querySelector(".servico-1").style.transform = "translate(0px, 0px)";
+                  document.querySelector(".servico-2").style.opacity = "1";
+                  document.querySelector(".servico-2").style.transform = "translate(0px, 0px)";
+                }
+                  if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+                  document.querySelector(".servico-3").style.opacity = "1";
+                  document.querySelector(".servico-3").style.transform = "translate(0px, 0px)";
+                  document.querySelector(".servico-4").style.opacity = "1";
+                  document.querySelector(".servico-4").style.transform = "translate(0px, 0px)";
+                  }
+                    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                      document.querySelector(".servico-5").style.opacity = "1";
+                      document.querySelector(".servico-5").style.transform = "translate(0px, 0px)";
+                      document.querySelector(".servico-6").style.opacity = "1";
+                      document.querySelector(".servico-6").style.transform = "translate(0px, 0px)";
+                    }
         } else {
                 document.querySelector(".logomarca").style.width = "140px";
                 document.querySelector("nav").style.height = "100px";
@@ -123,8 +143,29 @@ window.onscroll = function() {;
                 document.querySelector(".texto-sobre").style.opacity = "1";
                 document.querySelector(".texto-sobre").style.marginTop = "0";
                 }
+                if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+                  document.querySelector(".texto-servicos").style.opacity = "1";
+                  document.querySelector(".texto-servicos").style.transform = "translate(0px, 0px)";
+                  document.querySelector(".servico-1").style.opacity = "1";
+                  document.querySelector(".servico-1").style.transform = "translate(0px, 0px)";
+                  document.querySelector(".servico-2").style.opacity = "1";
+                  document.querySelector(".servico-2").style.transform = "translate(0px, 0px)";
+                }
+                  if (document.body.scrollTop > 1600 || document.documentElement.scrollTop > 1600) {
+                  document.querySelector(".servico-3").style.opacity = "1";
+                  document.querySelector(".servico-3").style.transform = "translate(0px, 0px)";
+                  document.querySelector(".servico-4").style.opacity = "1";
+                  document.querySelector(".servico-4").style.transform = "translate(0px, 0px)";
+                  }
+                    if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
+                      document.querySelector(".servico-5").style.opacity = "1";
+                      document.querySelector(".servico-5").style.transform = "translate(0px, 0px)";
+                      document.querySelector(".servico-6").style.opacity = "1";
+                      document.querySelector(".servico-6").style.transform = "translate(0px, 0px)";
+                    }
     }
 }
+
 
 //---------------Appear on scroll section sobre-------------------------------------
 /* window.onscroll = function() {;
