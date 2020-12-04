@@ -17,6 +17,12 @@ body {
     font-weight: bold;
 }
 
+.underscore {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: #fbca4a;
+}
+
     header{
         font-size: 16px;
         font-weight: 500;
@@ -402,9 +408,7 @@ body {
     color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(1, auto);
-    
-    
+    grid-template-rows: repeat(1, auto);   
 }
 
     .section-sobre .texto-sobre {
@@ -413,6 +417,10 @@ body {
         margin-top: 100px;
         opacity: 0;
         transition: 1.5s;
+        background-image: url(../images/logo-marcadagua-2.svg);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
         
     }
 
@@ -426,13 +434,14 @@ body {
         }
   
         .section-sobre .texto-sobre p {
-            padding: 10px 40px;
+            padding: 10px 60px;
             margin-bottom: 50px;
             text-align: justify;
             
         }
 
         .texto-sobre .btn-quemsomos {
+            height: 100px;
             text-align: center;
         }
 
@@ -450,7 +459,7 @@ body {
                 
         .texto-sobre a:hover {
             color: rgb(251, 201, 74);
-            border: 1px solid rgb(251, 201, 74);
+            border: 1px solid #fbc94a;
             background-color: rgba(255, 255, 255, 0.3);
         } 
 
@@ -468,9 +477,9 @@ body {
         grid-row: 1;
         grid-column: 3/11;
         margin-top: 50px;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(0px, 80px);
+        /* transform: translate(0px, 80px); */
     }
 
         .section-servicos .texto-servicos h2 {
@@ -486,13 +495,15 @@ body {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
         align-items: center;
-        background-color:hsl(0, 0%, 19%);
+        background-color:#3a3a3a;
+        border-radius: 10px;
     }
 
         .servicos img {
             grid-column: 1;
             grid-row: 1;
             margin: 15px;
+            border-radius: 5px;
         }
 
         .servicos h3 {
@@ -515,45 +526,45 @@ body {
     .servico-1 {
         grid-row: 2;
         grid-column: 3/7;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(-100px, 0px);
+        /* transform: translate(-100px, 0px); */
     }
 
     .servico-2 {
         grid-row: 2;
         grid-column: 7/11;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(100px, 0px);
+        /* transform: translate(100px, 0px); */
     }
     .servico-3 {
         grid-row: 3;
         grid-column: 3/7;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(-100px, 0px);
+        /* transform: translate(-100px, 0px); */
     }
     .servico-4 {
         grid-row: 3;
         grid-column: 7/11;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(100px, 0px);
+       /*  transform: translate(100px, 0px); */
     }
     .servico-5 {
         grid-row: 4;
         grid-column: 3/7;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(-100px, 0px);
+        /* transform: translate(-100px, 0px); */
     }
     .servico-6 {
         grid-row: 4;
         grid-column: 7/11;
-        opacity: 0;
+        opacity: 1;
         transition: 1.5s;
-        transform: translate(100px, 0px);
+        /* transform: translate(100px, 0px); */
     }
 
     .btn-servicos {
@@ -573,7 +584,7 @@ body {
     }
 
     .btn-servicos a:hover {
-        color: rgb(251, 201, 74);
+        color: #fbc94a;
         border: 1px solid rgb(251, 201, 74);
         background-color: rgba(255, 255, 255, 0.3);
     }
@@ -585,7 +596,44 @@ body {
             
         }
 
+    .como-funciona {
+        text-align: center;
+        grid-row: 6;
+        grid-column: 3/11;
+    }
+
+
+/*----------------Orçamento-------------------------*/
+
+.orcamento {
+    margin-top: 200px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 800px);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
     
+    
+}
+
+.container-orcamento{
+    
+    background-image: url(../images/orcamento2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: 1/13;
+}
+
+
+.container-orcamento h2 {
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+
 
 
 
@@ -857,6 +905,10 @@ body {
         grid-column: 2/12;
     }
 
+    .section-sobre .texto-sobre p {
+        padding: 10px 40px;
+    }
+
     .servico-1 {
         grid-row: 2;
         grid-column: 2/7;
@@ -997,7 +1049,11 @@ body {
 
     .section-sobre .texto-sobre {
         grid-row: 1;
-        grid-column: 1/13;
+        grid-column: 2/12;
+    }
+
+    .section-sobre .texto-sobre p {
+        padding: 10px 20px;
     }
 
     .servico-1 {
@@ -1030,6 +1086,12 @@ body {
         margin-top: 20px;
         text-align: center;
         grid-row: 8;
+        grid-column: 3/11;
+    }
+
+    .como-funciona {
+        text-align: center;
+        grid-row: 9;
         grid-column: 3/11;
     }
 }

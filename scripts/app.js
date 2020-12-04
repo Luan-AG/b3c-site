@@ -113,7 +113,7 @@ window.onscroll = function() {;
                 document.querySelector(".texto-sobre").style.opacity = "1";
                 document.querySelector(".texto-sobre").style.marginTop = "0";
                 }
-                if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                /* if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
                   document.querySelector(".texto-servicos").style.opacity = "1";
                   document.querySelector(".texto-servicos").style.transform = "translate(0px, 0px)";
                   document.querySelector(".servico-1").style.opacity = "1";
@@ -132,7 +132,7 @@ window.onscroll = function() {;
                       document.querySelector(".servico-5").style.transform = "translate(0px, 0px)";
                       document.querySelector(".servico-6").style.opacity = "1";
                       document.querySelector(".servico-6").style.transform = "translate(0px, 0px)";
-                    }
+                    } */
         } else {
                 document.querySelector(".logomarca").style.width = "140px";
                 document.querySelector("nav").style.height = "100px";
@@ -143,7 +143,7 @@ window.onscroll = function() {;
                 document.querySelector(".texto-sobre").style.opacity = "1";
                 document.querySelector(".texto-sobre").style.marginTop = "0";
                 }
-                if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+                /* if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
                   document.querySelector(".texto-servicos").style.opacity = "1";
                   document.querySelector(".texto-servicos").style.transform = "translate(0px, 0px)";
                   document.querySelector(".servico-1").style.opacity = "1";
@@ -162,20 +162,9 @@ window.onscroll = function() {;
                       document.querySelector(".servico-5").style.transform = "translate(0px, 0px)";
                       document.querySelector(".servico-6").style.opacity = "1";
                       document.querySelector(".servico-6").style.transform = "translate(0px, 0px)";
-                    }
+                    } */
     }
 }
-
-
-//---------------Appear on scroll section sobre-------------------------------------
-/* window.onscroll = function() {;
-    
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                document.querySelector(".texto-sobre").style.opacity = "1";
-                document.querySelector(".texto-sobre").style.marginTop = "0";
-        } 
-    }
- */
 
 //---------------SLIDESHOW-------------------------------------
 
