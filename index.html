@@ -140,20 +140,57 @@
             </div>       
         </section>
         <section class="orcamento">
+            <h2>Solicite um <span class="highlight">orçamento</span></h2>
             <div class="container-orcamento">
-                <h2>Solicite um <span class="highlight">orçamento</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure beatae numquam ipsa! Dicta distinctio magni repellendus, ipsam molestiae saepe sit a tenetur accusamus voluptatum et eligendi architecto quibusdam tempora.</p>
                 <form action="#" method="post">
-                    <label>NOME</label>
+                    <label id="label-fullname">Nome</label>
                     <input name="fullname" type="text" class="form-control" id="fullname">
                   
-                    <label>E-MAIL</label>
+                    <label id="label-email">E-mail</label>
                     <input name="email" type="email" class="form-control" id="email">
-                         
-                    <label>MENSSAGEM</label>
-                    <textarea name="message" rows="4" class="form-control" id="message"></textarea>
                     
+                    <label id="label-numero">Número para contato</label>
+                    <input name="email" type="email" class="form-control" id="numero">
+                    
+                    <label id="label-tipo-tradução">Tipo de tradução</label>
+                    <select class="select-dropdown" class="form-control" id="tipo-tradução">
+                        <option value="0">--</option>
+                        <option value="0">Tradução Simples</option>
+                        <option value="1">Tradução Juramentada</option>
+                    </select>     
+                    <label id="label-origem">Idioma de origem</label>
+                    <select class="select-dropdown" class="form-control" id="origem">
+                        <option value="0">--</option>
+                        <option value="0">Português</option>
+                        <option value="1">Inglês</option>
+                        <option value="2">Espanhol</option>
+                        <option value="3">Francês</option>
+                    </select>     
+                    <label id="label-destino">Idioma de destino</label>
+                    <select class="select-dropdown" class="form-control" id="destino">
+                        <option value="0">--</option>
+                        <option value="0">Inglês</option>
+                        <option value="1">Português</option>
+                        <option value="2">Espanhol</option>
+                        <option value="3">Francês</option>
+                    </select>
+                    <label id="label-anexo">Anexe seu arquivo</label>
+                    <input type="file" class="form-control" id="anexo">     
+                    <label id="label-message">Mensagem</label>
+                    <textarea name="message" rows="4" class="form-control" id="message"></textarea>
                     <button type="submit" class="form-btn">ENVIAR</button>
                 </form>
+            </div>
+        </section>
+        <section class="section-contato">
+            <h2>Entre em <span class="highlight">contato</span></h2>
+            <div class="container-contato">
+                <p>Se preferir entre em contato por:</p>
+                <a href="#"  target="_blank"><img src="images/whatsapp-brands.svg" alt="Whatsapp icon" class="whats"></a>
+                <a href="https://www.facebook.com/b3cint"  target="_blank"><img src="images/facebook-brands.svg" alt="" class="fb"></a>
+                <a href="#"  target="_blank"><img src="images/envelope-regular.svg" alt="" class="email"></a>
+
             </div>
         </section>
         
