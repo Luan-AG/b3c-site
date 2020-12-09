@@ -216,7 +216,7 @@ body {
 /*----------------Slide show-------------------------*/    
         .slider {
             margin-top: -150px;
-            height: 650px; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
+            height: 100vh; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
@@ -227,7 +227,7 @@ body {
 
         .slide {
             grid-column: 1/13;
-            height: 650px; /* And also Change this parameter to adjust the slide size according to the screen-size */
+            height: 100vh; /* And also Change this parameter to adjust the slide size according to the screen-size */
             width: 100%;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -597,16 +597,59 @@ body {
         }
 
     .como-funciona {
+        margin-top: 50px;
         text-align: center;
         grid-row: 6;
         grid-column: 3/11;
+        display: grid;
+        grid-template-rows: 100px 100px;
+        grid-template-columns: repeat(15, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .como-funciona h2{
+        grid-row: 1;
+        grid-column: 1/16;
+    }
+
+    .como-funciona .etapas{
+        grid-row: 2;
+       
+        
+    }
+
+    .como-funciona .etapa-1{
+        grid-column: 1/4;
+        width: 150px;
+        
+    }
+    .como-funciona .etapa-2{
+        grid-column: 4/7;
+        width: 150px;
+        
+    }
+    .como-funciona .etapa-3{
+        grid-column: 7/10;
+        width: 150px;
+        
+    }
+    .como-funciona .etapa-4{
+        grid-column: 10/13;
+        width: 150px;
+       
+    }
+    .como-funciona .etapa-5{
+        grid-column: 13/16;
+        width: 150px;
+        
     }
 
 
 /*----------------Orçamento-------------------------*/
 
 .orcamento {
-    margin-top: 200px;
+    margin-top: 150px;
     color: white;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -804,7 +847,7 @@ body {
 
         .form-btn {
             grid-row: 11;
-            grid-column: 1/13;
+            grid-column: 6/8;
             color: #fff;
             font-weight: bold;
             height: 40px;
@@ -815,8 +858,9 @@ body {
 
             .form-btn:hover {
                 cursor: pointer;
-                background-color: #a18231;
-                border: 1px solid   #a18231;
+                color: #000;
+                background-color: #eedbaa;
+                border: 1px solid   #eedbaa;
             }
 
 
@@ -855,16 +899,100 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.45);
+        /* box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.45); */
     }
 
     .container-contato p {
         grid-column: 1/6;
         grid-row: 1/3;
         margin-left: 50px;
+        margin-bottom: ;
         color: #fff;
         font-size: 24px;
     }
+
+    .container-contato a:hover{
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .container-contato a p:hover{
+        color: rgba(255, 255, 255, 0.5)  ;
+    }
+
+    .container-contato .whats {
+        display: flex;
+        grid-column: 1/6;
+        grid-row: 3;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        text-decoration: none;
+        color: #fff;
+        
+    }
+    .container-contato .fb {
+        display: flex;
+        grid-column: 1/6;
+        grid-row: 4;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .container-contato .email {
+        display: flex;
+        grid-column: 1/6;
+        grid-row: 5;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .container-contato .whats img {
+        width: 40px;
+    }
+    .container-contato .fb img {
+        width: 40px;
+    }
+    .container-contato .email img {
+        width: 40px;
+    }
+
+    .container-contato .whats p {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .container-contato .fb p {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .container-contato .email p {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+
+
+
+    
+/*----------------Parceiros-------------------------*/
+
+.nossos-parceiros {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.nossos-parceiros h2 {
+    grid-row: 1;
+    grid-column: 2/12;
+    color: white;
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
 
 
 
