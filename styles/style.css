@@ -1,4 +1,6 @@
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     box-sizing: border-box;
     margin: 0;
@@ -210,7 +212,7 @@ body {
 
 
     main {
-        height: 5000px;
+        height: auto;
     }
 
 /*----------------Slide show-------------------------*/    
@@ -242,27 +244,33 @@ body {
         }
             .slide .content-left {
                 grid-row: 1;
-                grid-column: 1/7;
+                grid-column: 1/6;
                 display: flex;
                 flex-direction: column;
                 align-items: left;
-                margin-left: 100px;
-                margin-bottom: 100px;     
+                padding: 25px 15px 25px 100px;
+                margin-bottom: 50px;
+                background-color: rgba(0, 0, 0, 0.6);
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;     
             }
 
             .slide .content-right {
                 grid-row: 1;
-                grid-column: 7/13;
+                grid-column: 8/13;
                 display: flex;
                 flex-direction: column;
                 align-items: right;
-                margin-right: 70px;
-                margin-bottom: 100px;     
+                padding: 25px 100px 25px 15px;
+                margin-bottom: 50px;
+                background-color: rgba(0, 0, 0, 0.6);
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;     
             }
 
                 .slide .content-left h2 {
                     margin: 0;
-                    font-size: 50px;
+                    font-size: 40px;
                     color: whitesmoke;
                 }
 
@@ -275,7 +283,7 @@ body {
                 .slide .content-right h2 {
                     text-align: right;
                     margin: 0;
-                    font-size: 50px;
+                    font-size: 40px;
                     color: whitesmoke;
                 }
 
@@ -518,7 +526,7 @@ body {
             font-size: 25px;
             grid-column: 2/5;
             grid-row: 1;
-            margin: 15px;
+            margin: 15px;   
         }
 
         .servicos p {
@@ -610,54 +618,110 @@ body {
         grid-row: 6;
         grid-column: 3/11;
         display: grid;
-        grid-template-rows: 100px 100px;
-        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(12, 1fr);
         gap: 20px;
         justify-items: center;
     }
 
     .como-funciona h2{
         grid-row: 1;
-        grid-column: 1/16;
-    }
-
-    .como-funciona .etapas{
-        grid-row: 2;
-       
-        
+        grid-column: 1/13;
+        margin-bottom: 50px;
     }
 
     .como-funciona .etapa-1{
-        grid-column: 1/4;
+        grid-column: 1/5;
         width: 150px;
-        
+        grid-row: 2;
     }
+    
+    .como-funciona .etapa-1::before {
+        content: '1';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+
+    }
+
+
     .como-funciona .etapa-2{
-        grid-column: 4/7;
+        grid-column: 5/9;
         width: 150px;
-        
+        grid-row: 2;
     }
+
+    .como-funciona .etapa-2::before {
+        content: '2';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
     .como-funciona .etapa-3{
-        grid-column: 7/10;
+        grid-column: 9/13;
         width: 150px;
-        
+        grid-row: 2;
     }
+
+    .como-funciona .etapa-3::before {
+        content: '3';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
     .como-funciona .etapa-4{
-        grid-column: 10/13;
+        grid-column: 3/7;
         width: 150px;
-       
+        grid-row: 3;
     }
+
+    .como-funciona .etapa-4::before {
+        content: '4';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
     .como-funciona .etapa-5{
-        grid-column: 13/16;
+        grid-column: 7/11;
         width: 150px;
-        
+        grid-row: 3;
+    }
+
+    .como-funciona .etapa-5::before {
+        content: '5';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
     }
 
 
 /*----------------Orçamento-------------------------*/
 
 .orcamento {
-    margin-top: 100px;
+    margin-top: 0px;
     padding-top: 50px;
     color: white;
     display: grid;
@@ -1242,14 +1306,16 @@ body {
 
     .slide .content-left {
         grid-column: 1/11;
-        margin-left: 50px;
-        margin-bottom: 50px;     
+        margin-left: 0px;
+        margin-bottom: 50px;
+        padding-left: 50px;     
     }
 
     .slide .content-right {
         grid-column: 3/13;
-        margin-right: 50px;
-        margin-bottom: 50px;     
+        margin-right: 0px;
+        margin-bottom: 50px;
+        padding-right: 50px;     
     }
 
         .slide .content-left h2 {
@@ -1369,12 +1435,12 @@ body {
     }
 
     .slide .content-left {
-        grid-column: 2/12;
-        margin-left: 20px;
+        grid-column: 1/12;
+        margin-left: 0px;
         margin-bottom: 50px;
         margin-right: 20px;
         background-color: rgba(0, 0, 0, 0.6);
-        padding: 5px 15px 0px 15px;     
+        padding: 15px 15px 15px 15px;   
     }
 
     .slide .content-left h2 {
@@ -1388,27 +1454,26 @@ body {
 
     .slide .content-right {
         grid-row: 1;
-        grid-column: 2/12;
+        grid-column: 2/13;
         display: flex;
         flex-direction: column;
-        align-items: left;
+        justify-items: right;
         margin-left: 20px;
         margin-bottom: 50px;
-        margin-right: 20px; 
         background-color: rgba(0, 0, 0, 0.6); 
-        padding: 5px 15px 0px 15px;   
+        padding: 15px 15px 15px 15px;   
     }
 
         .slide .content-right h2 {
-            text-align: left;
+            text-align: right;
             margin: 0;
             font-size: 30px;
             color: whitesmoke;
         }
 
         .slide .content-right p {
-            text-align: left;
-            padding-right: 20px;
+            text-align: right;
+            padding-right: 0px;
             padding-left: 0px;
             font-size: 14px;
             color: whitesmoke;
