@@ -1886,18 +1886,18 @@ body {
             grid-row: 2;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: 300px auto auto auto auto ;
+            grid-template-rows: 250px repeat(5, 50px) ;
             align-items: center;
             background-image: url(../images/call-center-mobile.svg);
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: cover;
             /* box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.45); */
         }
     
         .container-contato p {
             grid-column: 1/13;
-            grid-row: 3;
+            grid-row: 2/4;
             margin-left: 30px;
             margin-top: ;
             color: #fff;
@@ -1941,15 +1941,15 @@ body {
         }
     
         .container-contato .whats img {
-            width: 40px;
+            width: 35px;
             margin-left: 10px;
         }
         .container-contato .fb img {
-            width: 40px;
+            width: 35px;
             margin-left: 10px;
         }
         .container-contato .email img {
-            width: 40px;
+            width: 35px;
             margin-left: 10px;
         }
     
