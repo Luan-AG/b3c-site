@@ -1863,6 +1863,108 @@ body {
             background-color: #fbc94a;
             border: 1px solid  #fbc94a;
         }
+
+        .section-contato {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+    
+        .section-contato h2 {
+            grid-row: 1;
+            grid-column: 2/12;
+            color: white;
+            font-weight: normal;
+            font-size: 50px;
+            padding-top: 50px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+    
+        .section-contato .container-contato {
+            grid-column: 2/12;
+            grid-row: 2;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 300px auto auto auto auto ;
+            align-items: center;
+            background-image: url(../images/call-center-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.45); */
+        }
+    
+        .container-contato p {
+            grid-column: 1/13;
+            grid-row: 3;
+            margin-left: 30px;
+            margin-top: ;
+            color: #fff;
+            font-size: 16px;
+        }
+    
+        .container-contato a:hover{
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .container-contato a p:hover{
+            color: rgba(255, 255, 255, 0.5)  ;
+        }
+    
+        .container-contato .whats {
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 4;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        .container-contato .fb {
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 5;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .container-contato .email {
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 6;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+    
+        .container-contato .whats img {
+            width: 40px;
+            margin-left: 10px;
+        }
+        .container-contato .fb img {
+            width: 40px;
+            margin-left: 10px;
+        }
+        .container-contato .email img {
+            width: 40px;
+            margin-left: 10px;
+        }
+    
+        .container-contato .whats p {
+            font-size: 16px;
+            margin-left: 30px;
+        }
+        .container-contato .fb p {
+            font-size: 16px;
+            margin-left: 30px;
+        }
+        .container-contato .email p {
+            font-size: 16px;
+            margin-left: 30px;
+        }
 }
 
 
