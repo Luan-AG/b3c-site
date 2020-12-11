@@ -974,7 +974,7 @@ body {
         align-items: center;
         background-image: url(../images/call-center1.svg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: right;
         background-size: cover;
         /* box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.45); */
     }
@@ -1446,6 +1446,89 @@ body {
             background-color: #fbc94a;
             border: 1px solid  #fbc94a;
         }
+
+        .section-contato .container-contato {
+            grid-column: 3/11;
+            grid-row: 2;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows:370px repeat(5, auto);
+            align-items: center;
+            background-image: url(../images/call-center-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            /* box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.45); */
+        }
+    
+        .container-contato p {
+            grid-column: 1/13;
+            grid-row: 2/4;
+            margin-left: 50px;
+            margin-right: 50px;
+            color: #fff;
+            font-size: 20px;
+        }
+    
+        .container-contato a:hover{
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .container-contato a p:hover{
+            color: rgba(255, 255, 255, 0.5)  ;
+        }
+    
+        .container-contato .whats {
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 4;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        .container-contato .fb {
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 5;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .container-contato .email {
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 6;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+    
+        .container-contato .whats img {
+            width: 40px;
+        }
+        .container-contato .fb img {
+            width: 40px;
+        }
+        .container-contato .email img {
+            width: 40px;
+        }
+    
+        .container-contato .whats p {
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        .container-contato .fb p {
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        .container-contato .email p {
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        
 
     footer {
         display: grid;
