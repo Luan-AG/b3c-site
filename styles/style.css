@@ -251,8 +251,8 @@ body {
                 padding: 25px 15px 25px 100px;
                 margin-bottom: 50px;
                 background-color: rgba(0, 0, 0, 0.6);
-                border-top-right-radius: 50px;
-                border-bottom-right-radius: 50px;     
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;     
             }
 
             .slide .content-right {
@@ -264,12 +264,13 @@ body {
                 padding: 25px 100px 25px 15px;
                 margin-bottom: 50px;
                 background-color: rgba(0, 0, 0, 0.6);
-                border-top-left-radius: 50px;
-                border-bottom-left-radius: 50px;     
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;     
             }
 
                 .slide .content-left h2 {
                     margin: 0;
+                    padding-right: 20px;
                     font-size: 40px;
                     color: whitesmoke;
                 }
@@ -289,7 +290,7 @@ body {
 
                 .slide .content-right p {
                     text-align: right;
-                    padding-left: 200px;
+                    padding-left: 100px;
                     font-size: 14px;
                     color: whitesmoke;
                 }
@@ -513,6 +514,7 @@ body {
         align-items: center;
         background-color:#3a3a3a;
         border-radius: 10px;
+        
     }
 
         .servicos img {
@@ -520,16 +522,18 @@ body {
             grid-row: 1;
             margin: 15px;
             border-radius: 5px;
+            
         }
 
         .servicos h3 {
             font-size: 25px;
             grid-column: 2/5;
             grid-row: 1;
-            margin: 15px;   
+            margin: 15px; 
         }
 
         .servicos p {
+            
             grid-column: 1/5;
             grid-row: 2;
             margin-top: 0;
@@ -545,6 +549,7 @@ body {
         opacity: 1;
         transition: 1.5s;
         /* transform: translate(-100px, 0px); */
+        
     }
 
     .servico-2 {
@@ -620,7 +625,7 @@ body {
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(12, 1fr);
-        gap: 20px;
+        gap: 50px;
         justify-items: center;
     }
 
@@ -632,7 +637,7 @@ body {
 
     .como-funciona .etapa-1{
         grid-column: 1/5;
-        width: 150px;
+        width: 200px;
         grid-row: 2;
     }
     
@@ -651,7 +656,7 @@ body {
 
     .como-funciona .etapa-2{
         grid-column: 5/9;
-        width: 150px;
+        width: 200px;
         grid-row: 2;
     }
 
@@ -668,7 +673,7 @@ body {
 
     .como-funciona .etapa-3{
         grid-column: 9/13;
-        width: 150px;
+        width: 200px;
         grid-row: 2;
     }
 
@@ -685,7 +690,7 @@ body {
 
     .como-funciona .etapa-4{
         grid-column: 3/7;
-        width: 150px;
+        width: 200px;
         grid-row: 3;
     }
 
@@ -702,7 +707,7 @@ body {
 
     .como-funciona .etapa-5{
         grid-column: 7/11;
-        width: 150px;
+        width: 200px;
         grid-row: 3;
     }
 
@@ -727,7 +732,6 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(1, auto);
-    
 }
 
 .orcamento h2 {
@@ -749,8 +753,8 @@ body {
         grid-column: 1/13;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows:  auto;
-        margin: 50px 100px;
+        grid-template-rows: auto;
+        margin: 50px 50px;
     }
 
 
@@ -758,7 +762,7 @@ body {
             grid-row: 2;
             grid-column: 3/11;
             text-align: justify;
-            margin-top: 70px;
+            margin: 100px 50px 0px 50px;
         }
 
         .container-orcamento form {
@@ -768,7 +772,7 @@ body {
             grid-template-rows: repeat(16, auto);
             grid-template-columns: repeat(12, 1fr);
             align-items: center;
-            margin: 50px 0px;
+            margin: 50px 50px;
             padding: 0px;
             
         }
@@ -1191,6 +1195,23 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------768 PX-------------------------*/       
 @media only screen and (max-width: 768px) {
 
@@ -1305,17 +1326,18 @@ body {
     }
 
     .slide .content-left {
-        grid-column: 1/11;
+        grid-column: 1/10;
         margin-left: 0px;
         margin-bottom: 50px;
         padding-left: 50px;     
     }
 
     .slide .content-right {
-        grid-column: 3/13;
+        grid-column: 4/13;
         margin-right: 0px;
         margin-bottom: 50px;
-        padding-right: 50px;     
+        padding-right: 50px;
+        padding-left: 50px;    
     }
 
         .slide .content-left h2 {
@@ -1368,6 +1390,62 @@ body {
         grid-row: 4;
         grid-column: 7/12;
     }
+
+    .como-funciona {
+        margin-top: 50px;
+        text-align: center;
+        grid-row: 6;
+        grid-column: 2/12;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+
+    .container-orcamento{
+        background-image: url(../images/orcamento-3.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: 50px 50px;
+    }
+
+
+        .container-orcamento p {
+            grid-row: 2;
+            grid-column: 2/12;
+            text-align: justify;
+            margin: 100px 50px 0px 50px;
+        }
+
+        .container-orcamento form {
+            grid-column: 2/12;
+            grid-row: 3;
+            display: grid;
+            grid-template-rows: repeat(16, auto);
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            margin: 50px 50px;
+            padding: 0px;
+            
+        }
+
+        .form-btn {
+            grid-row: 11;
+            grid-column: 5/9;
+            color: #fff;
+            font-weight: bold;
+            height: 40px;
+            margin: 10px 0px;
+            background-color: #fbc94a;
+            border: 1px solid  #fbc94a;
+        }
 
     footer {
         display: grid;
@@ -1515,6 +1593,106 @@ body {
         grid-column: 2/12;
     }
 
+
+    .como-funciona {
+        margin-top: 50px;
+        text-align: center;
+        grid-row: 6;
+        grid-column: 1/13;
+        display: grid;
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .como-funciona .etapa-1{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 2;
+    }
+    
+    .como-funciona .etapa-1::before {
+        content: '1';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+
+    }
+
+
+    .como-funciona .etapa-2{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 3;
+    }
+
+    .como-funciona .etapa-2::before {
+        content: '2';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-3{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 4;
+    }
+
+    .como-funciona .etapa-3::before {
+        content: '3';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-4{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 5;
+    }
+
+    .como-funciona .etapa-4::before {
+        content: '4';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-5{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 6;
+    }
+
+    .como-funciona .etapa-5::before {
+        content: '5';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
     .btn-servicos {
         margin-top: 20px;
         text-align: center;
@@ -1527,6 +1705,164 @@ body {
         grid-row: 9;
         grid-column: 3/11;
     }
+
+    .container-orcamento{
+        background-image: url(../images/orcamento-4.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: 20px 20px;
+    }
+
+
+        .container-orcamento p {
+            grid-row: 2;
+            grid-column: 2/12;
+            text-align: justify;
+            margin: 80px 40px 0px 10px;
+        }
+
+        .container-orcamento form {
+            grid-column: 2/12;
+            grid-row: 3;
+            display: grid;
+            grid-template-rows: repeat(17, auto);
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            margin: 25px 40px 0px 10px;
+            padding: 0px;
+            
+        }
+
+        #label-fullname {
+            grid-row: 1;
+            grid-column: 1/7;
+        }
+
+        #fullname {
+            grid-row: 2;
+            grid-column: 1/13;
+            margin-right: 0;
+            
+        }
+
+        #label-email {
+                grid-row: 3;
+                grid-column: 1/13;
+                margin-left: 0px;
+            }
+        
+        #email {
+            grid-row: 4;
+            grid-column: 1/13;
+            margin-left: 0px;
+        }
+        
+        #label-numero{
+            grid-row: 5;
+            grid-column: 1/13;
+        }
+
+        #numero {
+            grid-row: 6;
+            grid-column: 1/13;
+            margin-right: 0px;
+        }
+
+        #label-tipo-tradução {
+            grid-row: 7;
+            grid-column: 1/13;
+            margin-left: 0;
+        }
+
+        #tipo-tradução {
+            grid-row: 8;
+            grid-column: 1/13;
+            margin-left: 0;
+        }
+
+        #label-origem {
+            grid-row:9;
+            grid-column: 1/13;
+            margin-left: 0;
+        }
+
+        #origem {
+            grid-row: 10;
+            grid-column: 1/13;
+            margin-right: 0px;
+        }
+
+        #label-destino {
+            grid-row: 11;
+            grid-column: 1/13;
+            margin-left: 5px;
+        }
+
+        #destino {
+            grid-row: 12;
+            grid-column: 1/13;
+            margin-left: 0px;
+        }
+
+        #label-anexo {
+            grid-row:13;
+            grid-column: 1/13;
+        }
+
+        #anexo {
+            padding: 0;
+            grid-row: 14;
+            grid-column: 1/13;
+        }
+
+        form select {
+            margin: 10px 0px;
+            font-family: 'Segoe UI';
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+        }
+
+            form select:focus {
+                outline-style: none;
+            }
+
+        #label-message {
+            grid-row: 15;
+            grid-column: 1/13;
+        }
+        #message {
+            grid-row: 16;
+            grid-column: 1/13;
+            height: 80px;
+            padding: 10px 10px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+        }
+            
+            #message:focus {
+                outline-style: none;                
+            }
+
+
+
+        .form-btn {
+            grid-row: 17;
+            grid-column: 4/10;
+            color: #fff;
+            font-weight: bold;
+            height: 40px;
+            margin: 10px 0px 50px 0px;
+            background-color: #fbc94a;
+            border: 1px solid  #fbc94a;
+        }
 }
 
 

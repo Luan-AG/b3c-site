@@ -88,7 +88,6 @@ function openNav() {
     document.getElementById("myNav").style.width = "100%";
     document.querySelector('#next').style.color = "rgba(36, 35, 35, 0)";
     document.querySelector('#prev').style.color = "rgba(36, 35, 35, 0)";
-    
   }
   
   /* Close when someone clicks on the "x" symbol inside the overlay */
@@ -96,10 +95,15 @@ function closeNav() {
     document.querySelector('#next').style.transitionDelay = "0.3s";
     document.getElementById("myNav").style.width = "0%";
     document.querySelector('#next').style.color = " rgba(255, 255, 255, 0.8)";
-    document.querySelector('#prev').style.color = " rgba(255, 255, 255, 0.8)";
-    
-    
-  }
+    document.querySelector('#prev').style.color = " rgba(255, 255, 255, 0.8)"; 
+}
+
+document.querySelector(".botao-overlay1").addEventListener("click", closeNav);
+document.querySelector(".botao-overlay2").addEventListener("click", closeNav);
+document.querySelector(".botao-overlay3").addEventListener("click", closeNav);
+document.querySelector(".botao-overlay4").addEventListener("click", closeNav);
+document.querySelector(".botao-overlay5").addEventListener("click", closeNav);
+
 
 //---------------SHRINK NAVBAR & Appear on scroll section sobre-------------------------------------
 
