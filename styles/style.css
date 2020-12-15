@@ -13,7 +13,7 @@ body {
     background-image: url(../images/wallpaper.jpg);
     background-position: top;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .highlight {
@@ -225,7 +225,7 @@ body {
 /*----------------Slide show-------------------------*/    
         .slider {
             margin-top: -150px;
-            height: 650px; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
+            height: 100vh; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: 1fr;
@@ -236,7 +236,7 @@ body {
 
         .slide {
             grid-column: 1/13;
-            height: 650px; /* And also Change this parameter to adjust the slide size according to the screen-size */
+            height: 100vh; /* And also Change this parameter to adjust the slide size according to the screen-size */
             width: 100%;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
