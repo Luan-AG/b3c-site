@@ -309,7 +309,7 @@ body {
                 .slide:first-child {
                     background-image: url('../images/slide-1.jpg');
                     background-repeat: no-repeat;
-                    background-size: contain;
+                    background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
                 }
