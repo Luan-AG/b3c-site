@@ -311,7 +311,7 @@ body {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    background-attachment: fixed;
+                    
                 }
 
                 .slide:nth-child(2) {
@@ -319,28 +319,28 @@ body {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    background-attachment: fixed;
+                    
                 }
                 .slide:nth-child(3) {
                     background-image: url('../images/slide-3.jpg');
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    background-attachment: fixed;
+                    
                 }
                 .slide:nth-child(4) {
                     background-image: url('../images/slide-4.jpg');
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    background-attachment: fixed;
+                    
                 }
                 .slide:nth-child(5) {
                     background-image: url('../images/slide-5.jpg');
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    background-attachment: fixed;
+                    
                 }
 
             .content-slide {
