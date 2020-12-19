@@ -54,10 +54,11 @@ body {
         nav a {
                 text-decoration: none;
                 padding: 5px 10px;
-                color: black;   
+                color: black;
+                /* border-bottom: 4px solid rgba(255, 255, 255, 0);    */
             }
 
-                #active {
+                .active {
                     color:  #fbca4a;
                     border-bottom: 4px solid #fbca4a;
                     padding: 5px 10px;
@@ -140,8 +141,8 @@ body {
     background-color: #fff;
     border: 1px solid #f8f8f8;
     position: absolute;
-    top: 32px;
-    right: 0px;
+    top: 25px;
+    right: -2px;
     width: 28px;
     border-bottom-left-radius:5px;
     border-bottom-right-radius: 5px;
@@ -466,10 +467,13 @@ body {
             }
 
             #zap {
+                
                 position: fixed;
                 top: 85vh;
                 left: 20px;
                 z-index: 1;
+                opacity: 0;
+                transition: .8s;
             }
 
             #zap img:hover {
@@ -484,6 +488,8 @@ body {
             }
 
             #up {
+                opacity: 0;
+                transition: .8s;
                 position: fixed;
                 top: 85vh;
                 right: 20px;
@@ -1508,8 +1514,8 @@ body {
         background-image: url(../images/wallpaper-ios.svg);
         background-position: top;
         background-attachment: fixed;
-        background-size: contain;
-        background-repeat: repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     nav{

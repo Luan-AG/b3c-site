@@ -162,3 +162,106 @@ if (auto) {
   // Run next slide at interval time
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
+//---------------Underline on Scroll-------------------------------------
+
+let scrollpos = window.scrollY;
+const inicio = document.querySelector(".slider");
+const sobre = document.querySelector("#quemsomos");
+const servicos = document.querySelector('#nossos-servicos');
+const orcamento = document.querySelector('#solicite-orcamento');
+const contato = document.querySelector('#entre-contato');
+
+const inicioHeight = inicio.offsetHeight;
+const sobreHeight = sobre.offsetHeight;
+const servicosHeight = servicos.offsetHeight;
+const orcamentoHeight = orcamento.offsetHeight;
+const contatoHeight = contato.offsetHeight;
+
+window.addEventListener('scroll', function() { 
+  scrollpos = window.scrollY
+  if (scrollpos < inicioHeight) { 
+    document.querySelector('.inicio').classList.add('active');
+    document.querySelector('.sobre').classList.remove('active');
+    document.querySelector('.serviços').classList.remove('active');
+    document.querySelector('.parceiros').classList.remove('active');
+    document.querySelector('.contato').classList.remove('active');
+
+  }  else if (scrollpos >= inicioHeight & scrollpos < (inicioHeight + sobreHeight -50)) { 
+    document.querySelector('.inicio').classList.remove('active');
+    document.querySelector('.sobre').classList.add('active');
+    document.querySelector('.serviços').classList.remove('active');
+    document.querySelector('.parceiros').classList.remove('active');
+    document.querySelector('.contato').classList.remove('active');
+
+  }  else if (scrollpos >= (inicioHeight + sobreHeight -50) & scrollpos < (inicioHeight + sobreHeight + servicosHeight)) { 
+    document.querySelector('.inicio').classList.remove('active');
+    document.querySelector('.sobre').classList.remove('active');
+    document.querySelector('.serviços').classList.add('active');
+    document.querySelector('.parceiros').classList.remove('active');
+    document.querySelector('.contato').classList.remove('active');
+
+  }  else if (scrollpos >= (inicioHeight + sobreHeight + servicosHeight) & scrollpos < (inicioHeight + sobreHeight + servicosHeight + orcamentoHeight)) { 
+    document.querySelector('.inicio').classList.remove('active');
+    document.querySelector('.sobre').classList.remove('active');
+    document.querySelector('.serviços').classList.remove('active');
+    document.querySelector('.parceiros').classList.add('active');
+    document.querySelector('.contato').classList.remove('active');
+
+  }  else { 
+    document.querySelector('.inicio').classList.remove('active');
+    document.querySelector('.sobre').classList.remove('active');
+    document.querySelector('.serviços').classList.remove('active');
+    document.querySelector('.parceiros').classList.remove('active');
+    document.querySelector('.contato').classList.add('active');
+    }
+})
+
+//---------------Show btn whatsapp on Scroll-------------------------------------
+
+window.addEventListener('scroll', function() { 
+  scrollpos = window.scrollY
+  if (scrollpos > 200) { 
+    document.querySelector('#zap').style.opacity = '1';
+  } else {
+    document.querySelector('#zap').style.opacity = '0';
+  }
+})
+
+//---------------Show btn up on Scroll-------------------------------------
+
+window.addEventListener('scroll', function() { 
+  scrollpos = window.scrollY
+  if (scrollpos > 4000) { 
+    document.querySelector('#up').style.opacity = '1';
+  } else {
+    document.querySelector('#up').style.opacity = '0';
+  }
+})
+
+
+/* const sections = document.querySelectorAll('section');
+
+const options = {
+  root: null, // it is the viewport
+  rootMargin: "0px 0px 0px 0px",
+  threshold: 0
+};
+
+const observer = new IntersectionObserver(function
+  (entries, observer) {
+    entries.forEach(entry => {
+      if(entry = entries[0]) {
+        console.log(entry.target);
+        document.querySelector('.inicio').classList.toggle('active');
+      } else if (entry === entries[1]) {
+        document.querySelector('.sobre').classList.toggle('active');
+      }
+      console.log(entry.target);
+    });
+  }, options);
+
+
+  sections.forEach(section => {
+    observer.observe(section);
+  }) */
