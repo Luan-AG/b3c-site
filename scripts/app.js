@@ -8,7 +8,7 @@ elementClicked.addEventListener("click", ()=>{
   elementToShow.classList.toggle("invisible");
 });
 
-//------------------OVERLAY EFFECT---------------------------------
+//------------------MENU OVERLAY EFFECT---------------------------------
 
 /* Open when someone clicks on the menu element */
 function openNav() {
@@ -36,67 +36,19 @@ document.querySelector(".botao-overlay5").addEventListener("click", closeNav);
 
 //---------------SHRINK NAVBAR & Appear on scroll section sobre-------------------------------------
 
-window.onscroll = function() {;
-    if(window.screen.width > 767){
+window.onscroll = function() {
+    if(window.screen.width >= 768){
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
               document.querySelector(".logomarca").style.width = "110px";
               document.querySelector("nav").style.height = "70px";
               document.querySelector("header").style.fontSize = "14px";
-              if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                document.querySelector(".texto-sobre").style.opacity = "1";
-                document.querySelector(".texto-sobre").style.marginTop = "0";
-                }
-                /* if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-                  document.querySelector(".texto-servicos").style.opacity = "1";
-                  document.querySelector(".texto-servicos").style.transform = "translate(0px, 0px)";
-                  document.querySelector(".servico-1").style.opacity = "1";
-                  document.querySelector(".servico-1").style.transform = "translate(0px, 0px)";
-                  document.querySelector(".servico-2").style.opacity = "1";
-                  document.querySelector(".servico-2").style.transform = "translate(0px, 0px)";
-                }
-                  if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-                  document.querySelector(".servico-3").style.opacity = "1";
-                  document.querySelector(".servico-3").style.transform = "translate(0px, 0px)";
-                  document.querySelector(".servico-4").style.opacity = "1";
-                  document.querySelector(".servico-4").style.transform = "translate(0px, 0px)";
-                  }
-                    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-                      document.querySelector(".servico-5").style.opacity = "1";
-                      document.querySelector(".servico-5").style.transform = "translate(0px, 0px)";
-                      document.querySelector(".servico-6").style.opacity = "1";
-                      document.querySelector(".servico-6").style.transform = "translate(0px, 0px)";
-                    } */
+              
         } else {
                 document.querySelector(".logomarca").style.width = "140px";
                 document.querySelector("nav").style.height = "100px";
                 document.querySelector("header").style.fontSize = "16px";
         }
-    } else {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                document.querySelector(".texto-sobre").style.opacity = "1";
-                document.querySelector(".texto-sobre").style.marginTop = "0";
-                }
-                /* if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
-                  document.querySelector(".texto-servicos").style.opacity = "1";
-                  document.querySelector(".texto-servicos").style.transform = "translate(0px, 0px)";
-                  document.querySelector(".servico-1").style.opacity = "1";
-                  document.querySelector(".servico-1").style.transform = "translate(0px, 0px)";
-                  document.querySelector(".servico-2").style.opacity = "1";
-                  document.querySelector(".servico-2").style.transform = "translate(0px, 0px)";
-                }
-                  if (document.body.scrollTop > 1600 || document.documentElement.scrollTop > 1600) {
-                  document.querySelector(".servico-3").style.opacity = "1";
-                  document.querySelector(".servico-3").style.transform = "translate(0px, 0px)";
-                  document.querySelector(".servico-4").style.opacity = "1";
-                  document.querySelector(".servico-4").style.transform = "translate(0px, 0px)";
-                  }
-                    if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
-                      document.querySelector(".servico-5").style.opacity = "1";
-                      document.querySelector(".servico-5").style.transform = "translate(0px, 0px)";
-                      document.querySelector(".servico-6").style.opacity = "1";
-                      document.querySelector(".servico-6").style.transform = "translate(0px, 0px)";
-                    } */
-    }
+    } 
 }
 
 //---------------SLIDESHOW-------------------------------------
@@ -239,29 +191,64 @@ window.addEventListener('scroll', function() {
   }
 })
 
+//---------------Button flip cards-------------------------------------
+btnMais1 = document.querySelector('.btn-mais-1');
+btnMais2 = document.querySelector('.btn-mais-2');
+btnMais3 = document.querySelector('.btn-mais-3');
+btnMais4 = document.querySelector('.btn-mais-4');
+btnMais5 = document.querySelector('.btn-mais-5');
+btnMais6 = document.querySelector('.btn-mais-6');
 
-/* const sections = document.querySelectorAll('section');
+btnVoltar1 = document.querySelector('.btn-voltar-1');
+btnVoltar2 = document.querySelector('.btn-voltar-2');
+btnVoltar3 = document.querySelector('.btn-voltar-3');
+btnVoltar4 = document.querySelector('.btn-voltar-4');
+btnVoltar5 = document.querySelector('.btn-voltar-5');
+btnVoltar6 = document.querySelector('.btn-voltar-6');
 
-const options = {
-  root: null, // it is the viewport
-  rootMargin: "0px 0px 0px 0px",
-  threshold: 0
-};
-
-const observer = new IntersectionObserver(function
-  (entries, observer) {
-    entries.forEach(entry => {
-      if(entry = entries[0]) {
-        console.log(entry.target);
-        document.querySelector('.inicio').classList.toggle('active');
-      } else if (entry === entries[1]) {
-        document.querySelector('.sobre').classList.toggle('active');
-      }
-      console.log(entry.target);
-    });
-  }, options);
+btnMais1.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+});
+btnVoltar1.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = '';
+});
 
 
-  sections.forEach(section => {
-    observer.observe(section);
-  }) */
+btnMais2.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+});
+btnVoltar2.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = '';
+});
+
+
+btnMais3.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+});
+btnVoltar3.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = '';
+});
+
+
+btnMais4.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+});
+btnVoltar4.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = '';
+});
+
+
+btnMais5.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+});
+btnVoltar5.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = '';
+});
+
+
+btnMais6.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+});
+btnVoltar6.addEventListener("click", function(e) {
+  e.target.parentElement.parentElement.parentElement.style.transform = '';
+});

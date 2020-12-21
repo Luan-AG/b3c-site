@@ -544,8 +544,6 @@ body {
         grid-row: 1;
         grid-column: 3/11;
         margin-top: 100px;
-        opacity: 0;
-        transition: 1.5s;
         background-image: url(../images/logo-marcadagua-2.svg);
         background-repeat: no-repeat;
         background-position: right bottom;
@@ -564,9 +562,8 @@ body {
   
         .section-sobre .texto-sobre p {
             padding: 10px 60px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             text-align: justify;
-            
         }
 
         
@@ -605,6 +602,529 @@ body {
             text-align: center;
         }
 
+
+/*----------------Flip-card-1---------------------------------------*/
+    .flip-card-1 {
+        grid-row: 2;
+        grid-column: 3/7;
+        background-color: transparent;
+        perspective: 1000px; 
+    }
+
+    .servico-1 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        
+    }
+
+    /* .flip-card-1:hover .servico-1 {
+        transform: rotateY(180deg);
+    } */
+
+    .servico-1-front, .servico-1-back {
+        /* position: absolute;
+        width: 100%;
+        height: 100%; */
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+
+    .servico-1-front {
+        grid-column: 1/5;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        align-items: center;
+        justify-items: left;
+        background-color:#3a3a3a;
+        border-radius: 10px;
+    }
+
+    .servico-1-front p {
+        grid-column: 1/5;
+        grid-row: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        text-align: left;
+        margin: 15px;
+    }
+
+    .servico-1-front .btn-mais-1, .servico-1-back .btn-voltar-1 {
+        grid-column: 1/5;
+        grid-row: 3;
+        width: 100%;
+              
+    }
+
+    .servico-1-front .btn-mais-1 p {
+        text-align: center;
+        cursor: pointer;
+        margin: 15px 50px;
+    }
+
+    .servico-1-back .btn-voltar-1 p{
+        text-align: center;
+        cursor: pointer;
+        grid-row: 2;
+    }
+
+    .servico-1-front .btn-mais-1 p:hover, .servico-1-back .btn-voltar-1 p:hover{
+        color: #fbca4a;
+    }
+    
+
+    .servico-1-back {
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        align-items: flex-end;
+        transform: rotateY(180deg);
+        grid-column: 1/5;
+        grid-row: 1;
+        text-align: center;
+    }
+
+  
+
+/*----------------Flip-card-2---------------------------------------*/
+
+.flip-card-2 {
+    grid-row: 2;
+    grid-column: 7/11;
+    background-color: transparent;
+    perspective: 1000px; 
+}
+
+.servico-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+/* .flip-card-1:hover .servico-1 {
+    transform: rotateY(180deg);
+} */
+
+.servico-2-front, .servico-2-back {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.servico-2-front {
+    grid-column: 1/5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: left;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
+
+.servico-2-front p {
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px;
+}
+
+.servico-2-front .btn-mais-2, .servico-2-back .btn-voltar-2 {
+    grid-column: 1/5;
+    grid-row: 3;
+    width: 100%;
+          
+}
+
+.servico-2-front .btn-mais-2 p {
+    text-align: center;
+    cursor: pointer;
+    margin: 15px 50px;
+}
+
+.servico-2-back .btn-voltar-2 p{
+    text-align: center;
+    cursor: pointer;
+    grid-row: 2;
+}
+
+.servico-2-front .btn-mais-2 p:hover, .servico-2-back .btn-voltar-2 p:hover{
+    color: #fbca4a;
+}
+
+
+.servico-2-back {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+}
+/*----------------Flip-card-3---------------------------------------*/
+.flip-card-3 {
+    grid-row: 3;
+    grid-column: 3/7;
+    background-color: transparent;
+    perspective: 1000px; 
+}
+
+.servico-3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+/* .flip-card-3:hover .servico-3 {
+    transform: rotateY(180deg);
+} */
+
+.servico-3-front, .servico-3-back {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.servico-3-front {
+    grid-column: 1/5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: left;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
+
+.servico-3-front p {
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px;
+}
+.servico-3-front .btn-mais-3, .servico-3-back .btn-voltar-3 {
+    grid-column: 1/5;
+    grid-row: 3;
+    width: 100%;       
+}
+
+.servico-3-front .btn-mais-3 p {
+    text-align: center;
+    cursor: pointer;
+    margin: 15px 50px;
+}
+
+.servico-3-back .btn-voltar-3 p{
+    text-align: center;
+    cursor: pointer;
+    grid-row: 2;
+}
+
+.servico-3-front .btn-mais-3 p:hover, .servico-3-back .btn-voltar-3 p:hover{
+    color: #fbca4a;
+}
+
+
+.servico-3-back {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+}
+/*----------------Flip-card-4---------------------------------------*/
+.flip-card-4 {
+    grid-row: 3;
+    grid-column: 7/11;
+    background-color: transparent;
+    perspective: 1000px; 
+}
+
+.servico-4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+/* .flip-card-4:hover .servico-4 {
+    transform: rotateY(-180deg);
+} */
+
+.servico-4-front, .servico-4-back {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.servico-4-front {
+    grid-column: 1/5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: left;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
+
+.servico-4-front p {
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px;
+}
+
+.servico-4-front .btn-mais-4, .servico-4-back .btn-voltar-4 {
+    grid-column: 1/5;
+    grid-row: 3;
+    width: 100%;       
+}
+
+.servico-4-front .btn-mais-4 p {
+    text-align: center;
+    cursor: pointer;
+    margin: 15px 50px;
+}
+
+.servico-4-back .btn-voltar-4 p{
+    text-align: center;
+    cursor: pointer;
+    grid-row: 2;
+}
+
+.servico-4-front .btn-mais-4 p:hover, .servico-4-back .btn-voltar-4 p:hover{
+    color: #fbca4a;
+}
+
+
+.servico-4-back {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+}
+/*----------------Flip-card-5---------------------------------------*/
+.flip-card-5 {
+    grid-row: 4;
+    grid-column: 3/7;
+    background-color: transparent;
+    perspective: 1000px; 
+}
+
+.servico-5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+/* .flip-card-5:hover .servico-5 {
+    transform: rotateY(180deg);
+} */
+
+.servico-5-front, .servico-5-back {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.servico-5-front {
+    grid-column: 1/5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: left;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
+
+.servico-5-front p {
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px;
+}
+
+.servico-5-front .btn-mais-5, .servico-5-back .btn-voltar-5 {
+    grid-column: 1/5;
+    grid-row: 3;
+    width: 100%;       
+}
+
+.servico-5-front .btn-mais-5 p {
+    text-align: center;
+    cursor: pointer;
+    margin: 15px 50px;
+}
+
+.servico-5-back .btn-voltar-5 p{
+    text-align: center;
+    cursor: pointer;
+    grid-row: 2;
+}
+
+.servico-5-front .btn-mais-5 p:hover, .servico-5-back .btn-voltar-5 p:hover{
+    color: #fbca4a;
+}
+
+
+.servico-5-back {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+}
+/*----------------Flip-card-6---------------------------------------*/
+.flip-card-6 {
+    grid-row: 4;
+    grid-column: 7/11;
+    background-color: transparent;
+    perspective: 1000px; 
+}
+
+.servico-6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+/* .flip-card-6:hover .servico-6 {
+    transform: rotateY(-180deg);
+} */
+
+.servico-6-front, .servico-6-back {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.servico-6-front {
+    grid-column: 1/5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: left;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
+
+.servico-6-front p {
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px;
+}
+
+.servico-6-front .btn-mais-6, .servico-6-back .btn-voltar-6 {
+    grid-column: 1/5;
+    grid-row: 3;
+    width: 100%;       
+}
+
+.servico-6-front .btn-mais-6 p {
+    text-align: center;
+    cursor: pointer;
+    margin: 15px 50px;
+}
+
+.servico-6-back .btn-voltar-6 p{
+    text-align: center;
+    cursor: pointer;
+    grid-row: 2;
+}
+
+.servico-6-front .btn-mais-6 p:hover, .servico-6-back .btn-voltar-6 p:hover{
+    color: #fbca4a;
+}
+
+
+.servico-6-back {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+}
+/*-------------------------------------------------------*/
     .servicos {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -644,8 +1164,7 @@ body {
     .servico-1 {
         grid-row: 2;
         grid-column: 3/7;
-        opacity: 1;
-        transition: 1.5s;
+        
         /* transform: translate(-100px, 0px); */
         
     }
@@ -653,36 +1172,31 @@ body {
     .servico-2 {
         grid-row: 2;
         grid-column: 7/11;
-        opacity: 1;
-        transition: 1.5s;
+        
         /* transform: translate(100px, 0px); */
     }
     .servico-3 {
         grid-row: 3;
         grid-column: 3/7;
-        opacity: 1;
-        transition: 1.5s;
+        
         /* transform: translate(-100px, 0px); */
     }
     .servico-4 {
         grid-row: 3;
         grid-column: 7/11;
-        opacity: 1;
-        transition: 1.5s;
+        
        /*  transform: translate(100px, 0px); */
     }
     .servico-5 {
         grid-row: 4;
         grid-column: 3/7;
-        opacity: 1;
-        transition: 1.5s;
+        
         /* transform: translate(-100px, 0px); */
     }
     .servico-6 {
         grid-row: 4;
         grid-column: 7/11;
-        opacity: 1;
-        transition: 1.5s;
+       
         /* transform: translate(100px, 0px); */
     }
 
@@ -1001,6 +1515,11 @@ body {
 
             form select:focus {
                 outline-style: none;
+            }
+
+            form select option:hover {
+               
+                background-color: yellow;
             }
 
         #label-message {
@@ -1740,30 +2259,31 @@ body {
 
     .section-sobre .texto-sobre p {
         padding: 10px 40px;
+        margin-bottom: 40px;
     }
 
-    .servico-1 {
+    .flip-card-1 {
         grid-row: 2;
         grid-column: 2/7;
     }
 
-    .servico-2 {
+    .flip-card-2 {
         grid-row: 2;
         grid-column: 7/12;
     }
-    .servico-3 {
+    .flip-card-3 {
         grid-row: 3;
         grid-column: 2/7;
     }
-    .servico-4 {
+    .flip-card-4 {
         grid-row: 3;
         grid-column: 7/12;
     }
-    .servico-5 {
+    .flip-card-5 {
         grid-row: 4;
         grid-column: 2/7;
     }
-    .servico-6 {
+    .flip-card-6 {
         grid-row: 4;
         grid-column: 7/12;
     }
@@ -2038,30 +2558,31 @@ body {
 
     .section-sobre .texto-sobre p {
         padding: 10px 20px;
+        margin-bottom: 40px;
     }
 
-    .servico-1 {
+    .flip-card-1 {
         grid-row: 2;
         grid-column: 2/12;
     }
 
-    .servico-2 {
+    .flip-card-2 {
         grid-row: 3;
         grid-column: 2/12;
     }
-    .servico-3 {
+    .flip-card-3 {
         grid-row: 4;
         grid-column: 2/12;
     }
-    .servico-4 {
+    .flip-card-4 {
         grid-row: 5;
         grid-column: 2/12;
     }
-    .servico-5 {
+    .flip-card-5 {
         grid-row: 6;
         grid-column: 2/12;
     }
-    .servico-6 {
+    .flip-card-6 {
         grid-row: 7;
         grid-column: 2/12;
     }
