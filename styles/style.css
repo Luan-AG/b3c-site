@@ -697,6 +697,8 @@ a {
         grid-column: 1/5;
         grid-row: 1;
         text-align: center;
+        background-color:#3a3a3a;
+        border-radius: 10px;
     }
 
   
@@ -790,6 +792,8 @@ a {
     grid-column: 1/5;
     grid-row: 1;
     text-align: center;
+    background-color:#3a3a3a;
+    border-radius: 10px;
 }
 /*----------------Flip-card-3---------------------------------------*/
 .flip-card-3 {
@@ -876,6 +880,8 @@ a {
     grid-column: 1/5;
     grid-row: 1;
     text-align: center;
+    background-color:#3a3a3a;
+    border-radius: 10px;
 }
 /*----------------Flip-card-4---------------------------------------*/
 .flip-card-4 {
@@ -963,6 +969,8 @@ a {
     grid-column: 1/5;
     grid-row: 1;
     text-align: center;
+    background-color:#3a3a3a;
+    border-radius: 10px;
 }
 /*----------------Flip-card-5---------------------------------------*/
 .flip-card-5 {
@@ -1050,6 +1058,8 @@ a {
     grid-column: 1/5;
     grid-row: 1;
     text-align: center;
+    background-color:#3a3a3a;
+    border-radius: 10px;
 }
 /*----------------Flip-card-6---------------------------------------*/
 .flip-card-6 {
@@ -1137,6 +1147,8 @@ a {
     grid-column: 1/5;
     grid-row: 1;
     text-align: center;
+    background-color:#3a3a3a;
+    border-radius: 10px;
 }
 /*-------------------------------------------------------*/
     .servicos {

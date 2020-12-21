@@ -212,22 +212,23 @@ window.addEventListener('scroll', function() {
 })
 
 //---------------Button flip cards-------------------------------------
-btnMais1 = document.querySelector('.btn-mais-1');
-btnMais2 = document.querySelector('.btn-mais-2');
-btnMais3 = document.querySelector('.btn-mais-3');
-btnMais4 = document.querySelector('.btn-mais-4');
-btnMais5 = document.querySelector('.btn-mais-5');
-btnMais6 = document.querySelector('.btn-mais-6');
+btnMais1 = document.querySelector('.btn-mais-1 p');
+btnMais2 = document.querySelector('.btn-mais-2 p');
+btnMais3 = document.querySelector('.btn-mais-3 p');
+btnMais4 = document.querySelector('.btn-mais-4 p');
+btnMais5 = document.querySelector('.btn-mais-5 p');
+btnMais6 = document.querySelector('.btn-mais-6 p');
 
-btnVoltar1 = document.querySelector('.btn-voltar-1');
-btnVoltar2 = document.querySelector('.btn-voltar-2');
-btnVoltar3 = document.querySelector('.btn-voltar-3');
-btnVoltar4 = document.querySelector('.btn-voltar-4');
-btnVoltar5 = document.querySelector('.btn-voltar-5');
-btnVoltar6 = document.querySelector('.btn-voltar-6');
+btnVoltar1 = document.querySelector('.btn-voltar-1 p');
+btnVoltar2 = document.querySelector('.btn-voltar-2 p');
+btnVoltar3 = document.querySelector('.btn-voltar-3 p');
+btnVoltar4 = document.querySelector('.btn-voltar-4 p');
+btnVoltar5 = document.querySelector('.btn-voltar-5 p');
+btnVoltar6 = document.querySelector('.btn-voltar-6 p');
 
 btnMais1.addEventListener("click", function(e) {
   e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+  console.log(e.target);
 });
 btnVoltar1.addEventListener("click", function(e) {
   e.target.parentElement.parentElement.parentElement.style.transform = '';
