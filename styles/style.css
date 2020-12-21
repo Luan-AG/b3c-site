@@ -16,6 +16,14 @@ body {
     background-repeat: repeat;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .highlight {
     color: #fbca4a;
     font-weight: bold;
@@ -659,6 +667,7 @@ body {
         grid-column: 1/5;
         grid-row: 3;
         width: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
               
     }
 
@@ -750,6 +759,7 @@ body {
     grid-column: 1/5;
     grid-row: 3;
     width: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
           
 }
 
@@ -763,6 +773,7 @@ body {
     text-align: center;
     cursor: pointer;
     grid-row: 2;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .servico-2-front .btn-mais-2 p:hover, .servico-2-back .btn-voltar-2 p:hover{
@@ -835,7 +846,8 @@ body {
 .servico-3-front .btn-mais-3, .servico-3-back .btn-voltar-3 {
     grid-column: 1/5;
     grid-row: 3;
-    width: 100%;       
+    width: 100%; 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);      
 }
 
 .servico-3-front .btn-mais-3 p {
@@ -921,7 +933,8 @@ body {
 .servico-4-front .btn-mais-4, .servico-4-back .btn-voltar-4 {
     grid-column: 1/5;
     grid-row: 3;
-    width: 100%;       
+    width: 100%;    
+    -webkit-tap-highlight-color: rgba(0,0,0,0);   
 }
 
 .servico-4-front .btn-mais-4 p {
@@ -1007,7 +1020,8 @@ body {
 .servico-5-front .btn-mais-5, .servico-5-back .btn-voltar-5 {
     grid-column: 1/5;
     grid-row: 3;
-    width: 100%;       
+    width: 100%;      
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
 }
 
 .servico-5-front .btn-mais-5 p {
@@ -1094,6 +1108,7 @@ body {
     grid-column: 1/5;
     grid-row: 3;
     width: 100%;       
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .servico-6-front .btn-mais-6 p {
@@ -2065,6 +2080,7 @@ body {
         line-height: 2;
         cursor: pointer;
         padding: 0px 5px 0px 5px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
     
     .lang-menu-mobile .selected-lang-mobile:before {
