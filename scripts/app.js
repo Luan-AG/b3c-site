@@ -52,7 +52,7 @@ window.onscroll = function() {
 }
 
 //---------------SLIDESHOW-------------------------------------
-
+const dot = document.querySelectorAll('.dot');
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
@@ -63,15 +63,26 @@ let slideInterval;
 const nextSlide = () => {
   // Get current class
   const current = document.querySelector('.current');
-  // Remove current class
-  current.classList.remove('current');
+  const activeDot = document.querySelector('.active-dot');
+  
+
   // Check for next slide
   if (current.nextElementSibling) {
     // Add current to next sibling
     current.nextElementSibling.classList.add('current');
+    activeDot.nextElementSibling.classList.add('active-dot');
+    // Remove current class
+    current.classList.remove('current');
+    activeDot.classList.remove('active-dot');
+
+    
   } else {
     // Add current to start
+
     slides[0].classList.add('current');
+
+    activeDot.classList.remove('active-dot');
+    dot[0].classList.add('active-dot');
   }
   setTimeout(() => current.classList.remove('current'));
 };
@@ -79,15 +90,23 @@ const nextSlide = () => {
 const prevSlide = () => {
   // Get current class
   const current = document.querySelector('.current');
-  // Remove current class
-  current.classList.remove('current');
+  const activeDot = document.querySelector('.active-dot');
+
   // Check for prev slide
   if (current.previousElementSibling) {
     // Add current to prev sibling
     current.previousElementSibling.classList.add('current');
+    activeDot.previousElementSibling.classList.add('active-dot');
+    // Remove current class
+    current.classList.remove('current');
+    activeDot.classList.remove('active-dot');
+
   } else {
     // Add current to last
     slides[slides.length - 1].classList.add('current');
+
+    activeDot.classList.remove('active-dot');
+    dot[4].classList.add('active-dot');
   }
   setTimeout(() => current.classList.remove('current'));
 };
@@ -114,6 +133,7 @@ if (auto) {
   // Run next slide at interval time
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
 
 //---------------Underline on Scroll-------------------------------------
 
