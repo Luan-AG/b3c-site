@@ -227,8 +227,8 @@ btnVoltar5 = document.querySelector('.btn-voltar-5 p');
 btnVoltar6 = document.querySelector('.btn-voltar-6 p');
 
 btnMais1.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
-  console.log(e.target);
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
+  
 });
 btnVoltar1.addEventListener("click", function(e) {
   e.target.parentElement.parentElement.parentElement.style.transform = '';
@@ -244,7 +244,7 @@ btnVoltar2.addEventListener("click", function(e) {
 
 
 btnMais3.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
 });
 btnVoltar3.addEventListener("click", function(e) {
   e.target.parentElement.parentElement.parentElement.style.transform = '';
@@ -260,7 +260,7 @@ btnVoltar4.addEventListener("click", function(e) {
 
 
 btnMais5.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
+  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
 });
 btnVoltar5.addEventListener("click", function(e) {
   e.target.parentElement.parentElement.parentElement.style.transform = '';
