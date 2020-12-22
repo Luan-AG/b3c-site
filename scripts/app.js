@@ -276,7 +276,7 @@ btnVoltar6.addEventListener("click", function(e) {
 
 //---------------jQuery Smooth Scrolling-------------------------------------
 
- $('.btn-barra-nav a').on('click', function (e) {
+ $('.btn-barra-nav a, .a-logo, #up' ).on('click', function (e) { 
    if (this.hash !== '') {
     e.preventDefault();
 
@@ -288,3 +288,5 @@ btnVoltar6.addEventListener("click", function(e) {
        },1000);
   }
  });
+
+ 
