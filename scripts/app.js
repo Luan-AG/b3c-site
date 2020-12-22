@@ -302,5 +302,5 @@ function smoothScroll(section,duration){
 }
 
 document.querySelector('.container-btn .contato').addEventListener('click', function(){
-  smoothScroll('#entre-contato', 0100);
+  smoothScroll('#entre-contato', 1000);
 })
