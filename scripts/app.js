@@ -273,3 +273,34 @@ btnMais6.addEventListener("click", function(e) {
 btnVoltar6.addEventListener("click", function(e) {
   e.target.parentElement.parentElement.parentElement.style.transform = '';
 });
+
+//---------------Smooth scroll cross browser-------------------------------------
+
+function smoothScroll(section,duration){
+  let target = document.querySelector(section);
+  let targetPosition = target.getBoundingClientRect().top;
+  let startPosition = window.pageYOffset;
+  let distance = targetPosition - startPosition;
+  let startTime = null;
+  
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+    let run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if(timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+  }
+  
+  requestAnimationFrame(animation);
+}
+
+document.querySelector('.container-btn .contato').addEventListener('click', function(){
+  smoothScroll('#entre-contato', 0100);
+})
