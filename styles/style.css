@@ -67,7 +67,7 @@ a {
             }
 
                 .active {
-                    color:  #fbca4a;
+                    color: #000;
                     border-bottom: 4px solid #fbca4a;
                     padding: 5px 10px;
                     border-radius: 5px;  

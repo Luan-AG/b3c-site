@@ -153,39 +153,39 @@ const contatoHeight = contato.offsetHeight;
 window.addEventListener('scroll', function() { 
   scrollpos = window.scrollY
   if (scrollpos < inicioHeight) { 
-    document.querySelector('.inicio').classList.add('active');
-    document.querySelector('.sobre').classList.remove('active');
-    document.querySelector('.serviços').classList.remove('active');
-    document.querySelector('.parceiros').classList.remove('active');
-    document.querySelector('.contato').classList.remove('active');
+    document.querySelector('.inicio a').classList.add('active');
+    document.querySelector('.sobre a').classList.remove('active');
+    document.querySelector('.serviços a').classList.remove('active');
+    document.querySelector('.parceiros a').classList.remove('active');
+    document.querySelector('.contato a').classList.remove('active');
 
   }  else if (scrollpos >= inicioHeight & scrollpos < (inicioHeight + sobreHeight -50)) { 
-    document.querySelector('.inicio').classList.remove('active');
-    document.querySelector('.sobre').classList.add('active');
-    document.querySelector('.serviços').classList.remove('active');
-    document.querySelector('.parceiros').classList.remove('active');
-    document.querySelector('.contato').classList.remove('active');
+    document.querySelector('.inicio a').classList.remove('active');
+    document.querySelector('.sobre a').classList.add('active');
+    document.querySelector('.serviços a').classList.remove('active');
+    document.querySelector('.parceiros a').classList.remove('active');
+    document.querySelector('.contato a').classList.remove('active');
 
   }  else if (scrollpos >= (inicioHeight + sobreHeight -50) & scrollpos < (inicioHeight + sobreHeight + servicosHeight)) { 
-    document.querySelector('.inicio').classList.remove('active');
-    document.querySelector('.sobre').classList.remove('active');
-    document.querySelector('.serviços').classList.add('active');
-    document.querySelector('.parceiros').classList.remove('active');
-    document.querySelector('.contato').classList.remove('active');
+    document.querySelector('.inicio a').classList.remove('active');
+    document.querySelector('.sobre a').classList.remove('active');
+    document.querySelector('.serviços a').classList.add('active');
+    document.querySelector('.parceiros a').classList.remove('active');
+    document.querySelector('.contato a').classList.remove('active');
 
   }  else if (scrollpos >= (inicioHeight + sobreHeight + servicosHeight) & scrollpos < (inicioHeight + sobreHeight + servicosHeight + orcamentoHeight)) { 
-    document.querySelector('.inicio').classList.remove('active');
-    document.querySelector('.sobre').classList.remove('active');
-    document.querySelector('.serviços').classList.remove('active');
-    document.querySelector('.parceiros').classList.add('active');
-    document.querySelector('.contato').classList.remove('active');
+    document.querySelector('.inicio a').classList.remove('active');
+    document.querySelector('.sobre a').classList.remove('active');
+    document.querySelector('.serviços a').classList.remove('active');
+    document.querySelector('.parceiros a').classList.add('active');
+    document.querySelector('.contato a').classList.remove('active');
 
   }  else { 
-    document.querySelector('.inicio').classList.remove('active');
-    document.querySelector('.sobre').classList.remove('active');
-    document.querySelector('.serviços').classList.remove('active');
-    document.querySelector('.parceiros').classList.remove('active');
-    document.querySelector('.contato').classList.add('active');
+    document.querySelector('.inicio a').classList.remove('active');
+    document.querySelector('.sobre a').classList.remove('active');
+    document.querySelector('.serviços a').classList.remove('active');
+    document.querySelector('.parceiros a').classList.remove('active');
+    document.querySelector('.contato a').classList.add('active');
     }
 })
 
