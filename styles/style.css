@@ -84,6 +84,8 @@ a {
                     border-bottom: 4px solid #fbca4a;
                     padding: 5px 10px;
                     border-radius: 5px;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px; 
                 }
 
             .logomarca {
