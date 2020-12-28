@@ -1770,10 +1770,10 @@ a {
 }
 
 .parceiro-1 {
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     border-radius: 10px;
     grid-row: 3;
-    grid-column: 3/7;
+    grid-column: 4/7;
     text-align: center;
 }
 
@@ -1786,10 +1786,10 @@ a {
 }
 
 .parceiro-2 {
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     border-radius: 10px;
     grid-row: 3;
-    grid-column: 7/11;
+    grid-column: 7/10;
     text-align: center;
 }
 .parceiro-2 img {
