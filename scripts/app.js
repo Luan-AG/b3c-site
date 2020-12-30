@@ -34,7 +34,7 @@ document.querySelector(".botao-overlay4").addEventListener("click", closeNav);
 document.querySelector(".botao-overlay5").addEventListener("click", closeNav);
 
 
-//---------------SHRINK NAVBAR & Appear on scroll section sobre-------------------------------------
+//---------------SHRINK NAVBAR-------------------------------------
 
 window.onscroll = function() {
     if(window.screen.width >= 768){

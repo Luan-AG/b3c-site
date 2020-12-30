@@ -16,11 +16,7 @@ body {
     background-repeat: repeat;
 }
 
-input,
-textarea,
-button,
-select,
-a {
+input, textarea, button, select, a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -1996,7 +1992,7 @@ a {
     }
 
     .section-contato .container-contato {
-        width: 97%;
+        width: 94%;
         margin: auto;
     }
 
@@ -3025,45 +3021,6 @@ a {
             color: rgba(255, 255, 255, 0.5)  ;
         }
     
-        .container-contato .whats {
-            display: flex;
-            grid-column: 2/7;
-            grid-row: 1;
-            margin-left: 0px;
-            margin-bottom: 30px;
-            text-decoration: none;
-            color: #fff;
-            
-            
-        }
-        .container-contato .fb {
-            display: flex;
-            grid-column: 7/12;
-            grid-row: 1;
-            margin-left: 0px;
-            margin-bottom: 30px;
-            text-decoration: none;
-            color: #fff;
-        }
-        .container-contato .email {
-            display: flex;
-            grid-column: 2/7;
-            grid-row: 2;
-            margin-left: 0px;
-            margin-bottom: 30px;
-            text-decoration: none;
-            color: #fff;
-        }
-        .container-contato .phone {
-            display: flex;
-            grid-column: 7/12;
-            grid-row: 2;
-            margin-left: 0px;
-            margin-bottom: 30px;
-            text-decoration: none;
-            color: #fff;
-        }
-    
         .container-contato .contact-man {
             grid-column: 1/12;
             grid-row: 6;
@@ -3074,13 +3031,7 @@ a {
             
         }
     
-        .container-contato .whats img {
-            width: 40px;
-        }
-        .container-contato .fb img {
-            width: 40px;
-        }
-        .container-contato .email img {
+        .container-contato .whats img, .container-contato .fb img, .container-contato .email img {
             width: 40px;
         }
         .container-contato .phone img {
@@ -3111,10 +3062,12 @@ a {
         .icons-container {
             grid-row: 3/5;
             grid-column: 1/13;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(4,auto);
-            justify-items: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0px 10px 20px 0px;
+            
         }
 
 .nossos-parceiros {
