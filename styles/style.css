@@ -1381,7 +1381,7 @@ a {
     font-weight: normal;
     font-size: 50px;
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-align: center;
     grid-column: 3/11;
     grid-row: 1;
@@ -1947,21 +1947,7 @@ a {
             color:  #a7a5a580;
         }
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 /*----------------1920 PX-------------------------*/
 @media only screen and (min-width: 1920px) {
    .texto-sobre p {
@@ -1988,6 +1974,9 @@ a {
         margin: auto;
     }
 
+    .orcamento h2 {
+        margin-bottom: 80px;
+    }
 
     .container-orcamento{
         background-image: url(../images/orcamento2.svg);
@@ -2011,7 +2000,10 @@ a {
         margin: auto;
     }
 
-    
+    .container-contato .whats, .container-contato .fb, .container-contato .email, .container-contato .phone {
+        width: 50%; 
+    }
+     
 }
 
 
@@ -2043,7 +2035,6 @@ a {
     .container-orcamento{
         background-image: url(../images/orcamento-1366.svg);
     }
-
 }
 
 /*----------------1024 PX-------------------------*/
