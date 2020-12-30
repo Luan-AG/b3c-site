@@ -1160,8 +1160,8 @@ a {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
         align-items: center;
-        
         border-radius: 10px;
+        
         
     }
 
@@ -1963,8 +1963,32 @@ a {
 
 
 /*----------------1920 PX-------------------------*/
-@media only screen and (max-width: 1920px) {
-   
+@media only screen and (min-width: 1920px) {
+   .texto-sobre p {
+       line-height: 1.5;
+       margin: 20px;
+   }
+
+    .servico-1-front, .servico-2-front, .servico-3-front, .servico-4-front, .servico-5-front, .servico-6-front {
+        padding: 10px;
+    }
+    
+    .servico-1-back, .servico-2-back, .servico-3-back, .servico-4-back, .servico-5-back, .servico-6-back {
+        padding: 10px;
+    }
+    
+    .servicos img {
+        width: 50px;
+    }
+
+    .servicos h3 {
+        grid-column: 2/5;
+        text-align: left;
+        width: 80%;
+        margin: auto;
+    }
+
+
     .container-orcamento{
         background-image: url(../images/orcamento2.svg);
         grid-column: 2/12;
@@ -1986,6 +2010,8 @@ a {
         width: 97%;
         margin: auto;
     }
+
+    
 }
 
 
