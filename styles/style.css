@@ -208,7 +208,7 @@ a {
             /* Position the content inside the overlay */
             .overlay-content {
                 position: relative;
-                top: 25%; /* 25% from the top */
+                top: 20%; /* 25% from the top */
                 width: 100%; /* 100% width */
                 text-align: center; /* Centered text/links */
                 margin-top: 0px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -1381,7 +1381,7 @@ a {
     font-weight: normal;
     font-size: 50px;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     text-align: center;
     grid-column: 3/11;
     grid-row: 1;
@@ -1962,7 +1962,31 @@ a {
 
 
 
+/*----------------1920 PX-------------------------*/
+@media only screen and (max-width: 1920px) {
+   
+    .container-orcamento{
+        background-image: url(../images/orcamento2.svg);
+        grid-column: 2/12;
+        width: 80%;
+        margin: auto;
+    }
 
+    .container-orcamento p {
+        grid-column: 2/12;
+       
+    }
+
+    .container-orcamento form {
+        grid-column: 2/12;
+        
+    }
+
+    .section-contato .container-contato {
+        width: 97%;
+        margin: auto;
+    }
+}
 
 
 
