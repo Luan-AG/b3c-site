@@ -1150,6 +1150,95 @@ input, textarea, button, select, a {
     background-color:#3a3a3a;
     border-radius: 10px;
 }
+/*----------------Flip-card-7---------------------------------------*/
+.flip-card-7 {
+    grid-row: 5;
+    grid-column: 5/9;
+    background-color: transparent;
+    perspective: 1000px; 
+}
+
+.servico-7 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+/* .flip-card-6:hover .servico-6 {
+    transform: rotateY(-180deg);
+} */
+
+.servico-7-front, .servico-7-back {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.servico-7-front {
+    grid-column: 1/5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: left;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
+
+.servico-7-front p {
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px;
+}
+
+.servico-7-front .btn-mais-7, .servico-7-back .btn-voltar-7 {
+    grid-column: 1/5;
+    grid-row: 3;
+    width: 100%;       
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.servico-7-front .btn-mais-7 p {
+    text-align: center;
+    cursor: pointer;
+    margin: 15px 50px;
+}
+
+.servico-7-back .btn-voltar-7 p{
+    text-align: center;
+    cursor: pointer;
+    grid-row: 2;
+}
+
+.servico-7-front .btn-mais-7 p:hover, .servico-7-back .btn-voltar-7 p:hover{
+    color: #fbca4a;
+}
+
+
+.servico-7-back {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+    background-color:#3a3a3a;
+    border-radius: 10px;
+}
 /*-------------------------------------------------------*/
     .servicos {
         display: grid;
