@@ -328,10 +328,11 @@ input, textarea, button, select, a {
             .slide .content-left {
                 grid-row: 1;
                 grid-column: 1/6;
+                justify-self: start;
                 display: flex;
                 flex-direction: column;
                 align-items: left;
-                padding: 25px 15px 25px 100px;
+                padding: 25px 5px 25px 60px;
                 margin-bottom: 50px;
                 background-color: rgba(0, 0, 0, 0.6);
                 border-top-right-radius: 25px;
@@ -344,7 +345,7 @@ input, textarea, button, select, a {
                 display: flex;
                 flex-direction: column;
                 align-items: right;
-                padding: 25px 100px 25px 15px;
+                padding: 25px 60px 25px 25px;
                 margin-bottom: 50px;
                 background-color: rgba(0, 0, 0, 0.6);
                 border-top-left-radius: 25px;
