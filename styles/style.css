@@ -3046,6 +3046,7 @@ input, textarea, button, select, a {
             padding-top: 50px;
             margin-bottom: 80px;
             text-align: center;
+            
         }
     
         .section-contato .container-contato {
@@ -3068,7 +3069,7 @@ input, textarea, button, select, a {
             margin-top: 35px;
             color: #fff;
             font-size: 18px;
-            text-align: justify;
+            text-align: center;
         }
     
         .container-contato a:hover{
