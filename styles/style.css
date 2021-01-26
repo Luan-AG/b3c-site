@@ -1936,15 +1936,18 @@ input, textarea, button, select, a {
                 text-align: center;
                 grid-row: 1;
                 grid-column: 1/5;
+                margin-bottom: 20px;
             }
             
             .siga a {
                 margin-right: 10px;
                 grid-row: 2;
                 text-align: center;
+                margin: auto;
             }
 
             .siga a img {
+                
                 width: 30px;
             }
 
@@ -1973,6 +1976,7 @@ input, textarea, button, select, a {
                 grid-row: 3;
                 grid-column: 1/4;
                 margin-top: 40px;
+                margin-bottom: 10px;
             }
             
             
@@ -1983,6 +1987,7 @@ input, textarea, button, select, a {
                 width: 150px;
                 padding: 10px;
                 border-radius: 50px;
+                
             }
         
             .btn-footer-orcamento a:hover {
@@ -1991,20 +1996,35 @@ input, textarea, button, select, a {
                 background-color: rgba(255, 255, 255, 0.3);
             }
 
+            .siga :nth-child(6) {
+                grid-column: 1/4;
+                grid-row: 4;
+                justify-self: center;
+                margin: 20px auto;
+            }
+
 
         footer .copy {
             grid-row: 3;
             grid-column: 1/13;
             border-top: 1px solid #a7a5a580;
-            margin-top: 20px;
+            margin-top: 0px;
             width: 90%;
             font-size: 10px;
             text-align: center;
         }
 
-        footer .copy p {
+        footer .copy {
             color:  #a7a5a580;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            
         }
+
+
+
+       
 
     
 /*----------------1920 PX-------------------------*/
