@@ -1631,7 +1631,7 @@ input, textarea, button, select, a {
         .form-btn {
             grid-row: 11;
             grid-column: 6/8;
-            color: #fff;
+            color:  #000;
             font-weight: bold;
             height: 40px;
             margin: 10px 0px;
@@ -1996,7 +1996,7 @@ input, textarea, button, select, a {
                 background-color: rgba(255, 255, 255, 0.3);
             }
 
-            .siga :nth-child(6) {
+            .siga .selo {
                 grid-column: 1/4;
                 grid-row: 4;
                 justify-self: center;
@@ -2527,7 +2527,7 @@ input, textarea, button, select, a {
         .form-btn {
             grid-row: 11;
             grid-column: 5/9;
-            color: #fff;
+            color: #000;
             font-weight: bold;
             height: 40px;
             margin: 10px 0px;
@@ -3106,7 +3106,7 @@ input, textarea, button, select, a {
         .form-btn {
             grid-row: 17;
             grid-column: 4/10;
-            color: #fff;
+            color: #000;
             font-weight: bold;
             height: 40px;
             margin: 10px 0px 50px 0px;

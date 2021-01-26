@@ -298,4 +298,15 @@ btnVoltar7.addEventListener("click", function(e) {
   }
  });
 
- 
+ //---------------Clear form-------------------------------------
+
+ /* function clearForm() {
+  
+  submitButton = document.querySelector('.form-btn');
+
+  submitButton.addEventListener("click", () => {
+      document.getElementById("formul").reset();
+    });  
+}
+
+clearForm(); */
