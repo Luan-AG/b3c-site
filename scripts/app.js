@@ -300,13 +300,13 @@ btnVoltar7.addEventListener("click", function(e) {
 
  //---------------Clear form-------------------------------------
 
- /* function clearForm() {
+ function clearForm() {
   
   submitButton = document.querySelector('.form-btn');
 
-  submitButton.addEventListener("click", () => {
+  submitButton.addEventListener("submit", () => {
       document.getElementById("formul").reset();
     });  
 }
 
-clearForm(); */
+clearForm();
