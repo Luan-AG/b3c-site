@@ -1,0 +1,241 @@
+
+    .como-funciona {
+        margin-top: 50px;
+        text-align: center;
+        grid-row: 9;
+        grid-column: 3/11;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+
+    .como-funciona h2{
+        grid-row: 1;
+        grid-column: 1/13;
+        margin-bottom: 50px;
+    }
+
+    .como-funciona .etapa-1{
+        grid-column: 1/5;
+        width: 200px;
+        grid-row: 2;
+    }
+    
+    .como-funciona .etapa-1::before {
+        content: '1';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+
+    }
+
+
+    .como-funciona .etapa-2{
+        grid-column: 5/9;
+        width: 200px;
+        grid-row: 2;
+    }
+
+    .como-funciona .etapa-2::before {
+        content: '2';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-3{
+        grid-column: 9/13;
+        width: 200px;
+        grid-row: 2;
+    }
+
+    .como-funciona .etapa-3::before {
+        content: '3';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-4{
+        grid-column: 3/7;
+        width: 200px;
+        grid-row: 3;
+    }
+
+    .como-funciona .etapa-4::before {
+        content: '4';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-5{
+        grid-column: 7/11;
+        width: 200px;
+        grid-row: 3;
+    }
+
+    .como-funciona .etapa-5::before {
+        content: '5';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+       
+@media only screen and (max-width: 768px) {
+    .como-funciona {
+        margin-top: 50px;
+        text-align: center;
+        grid-row: 6;
+        grid-column: 2/14;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .como-funciona {
+        margin-top: 50px;
+        text-align: center;
+        grid-row: 6;
+        grid-column: 4/13;
+        display: grid;
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .como-funciona h2 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    .como-funciona .etapa-1{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 2;
+    }
+    
+    .como-funciona .etapa-1::before {
+        content: '1';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+
+    }
+
+
+    .como-funciona .etapa-2{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 3;
+    }
+
+    .como-funciona .etapa-2::before {
+        content: '2';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-3{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 4;
+    }
+
+    .como-funciona .etapa-3::before {
+        content: '3';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-4{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 5;
+    }
+
+    .como-funciona .etapa-4::before {
+        content: '4';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .como-funciona .etapa-5{
+        grid-column: 1/13;
+        width: 200px;
+        grid-row: 6;
+    }
+
+    .como-funciona .etapa-5::before {
+        content: '5';
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        width: 20px;
+        border-radius: 50%;
+        background-color:  #fbc94a;
+        color: #000;
+    }
+
+    .btn-servicos {
+        margin-top: 20px;
+        text-align: center;
+        grid-row: 8;
+        grid-column: 3/11;
+    }
+
+    .como-funciona {
+        text-align: center;
+        grid-row: 9;
+        grid-column: 3/12;
+    }
+}

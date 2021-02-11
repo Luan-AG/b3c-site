@@ -1,0 +1,470 @@
+/*----------------Orçamento-------------------------*/
+
+.orcamento {
+    margin-top: 0px;
+    padding-top: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, auto);
+}
+
+.orcamento h2 {
+    color: white;
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    grid-column: 3/11;
+    grid-row: 1;
+}
+
+    .container-orcamento{
+        background-image: url(../images/orcamento2.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: 50px 50px;
+    }
+
+
+        .container-orcamento p {
+            grid-row: 2;
+            grid-column: 3/11;
+            text-align: justify;
+            margin: 100px 50px 0px 50px;
+        }
+
+        .container-orcamento form {
+            grid-column: 3/11;
+            grid-row: 3;
+            display: grid;
+            grid-template-rows: repeat(16, auto);
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            margin: 50px 50px;
+            padding: 0px;
+            
+        }
+
+        .form-control {
+            font-family: 'Segoe UI';
+            font-size: 14px;
+            margin: 10px 0px;
+            padding: 0px 10px;
+            color: #ffffff;
+        }
+
+        #label-fullname {
+            grid-row: 1;
+            grid-column: 1/7;
+        }
+
+        #fullname {
+            grid-row: 2;
+            grid-column: 1/7;
+            height: 28px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+            margin-right: 5px;
+        }
+
+            #fullname {
+                outline-style: none;
+            }
+
+        #label-email {
+                grid-row: 1;
+                grid-column: 7/13;
+                margin-left: 5px;
+            }
+        
+        #email {
+            grid-row: 2;
+            grid-column: 7/13;
+            color: #fff;
+            height: 28px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+            margin-left: 5px;
+        }
+
+            #email:focus {
+                outline-style: none;
+            }
+        
+        #label-numero{
+            grid-row: 3;
+            grid-column: 1/7;
+        }
+
+        #numero {
+            grid-row: 4;
+            grid-column: 1/7;
+            margin: 10px 0px;
+            font-family: 'Segoe UI';
+            color: #fff;
+            height: 28px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+            margin-right: 5px;
+        }
+
+        #numero:focus {
+            outline-style: none;
+        }
+
+        #label-tipo-tradução {
+            grid-row: 3;
+            grid-column: 7/13;
+            margin-left: 5px;
+        }
+
+        #tipo-tradução {
+            margin-left: 5px;
+            grid-row: 4;
+            grid-column: 7/13;
+        }
+
+        #label-origem {
+            grid-row: 5;
+            grid-column: 1/7;
+            
+        }
+
+        #origem {
+            grid-row: 6;
+            grid-column: 1/7;
+            margin-right: 5px;
+        }
+
+        #label-destino {
+            grid-row: 5;
+            grid-column: 7/13;
+            margin-left: 5px;
+        }
+
+        #destino {
+            grid-row: 6;
+            grid-column: 7/13;
+            margin-left: 5px;
+        }
+
+        #label-anexo {
+            grid-row: 7;
+            grid-column: 1/13;
+        }
+
+        #anexo {
+            padding: 0;
+            grid-row: 8;
+            grid-column: 1/13;
+        }
+
+        form select {
+            margin: 10px 0px;
+            font-family: 'Segoe UI';
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+        }
+
+            form select:focus {
+                outline-style: none;
+            }
+
+            form select option:hover {
+               
+                background-color: yellow;
+            }
+
+        #label-message {
+            grid-row: 9;
+            grid-column: 1/13;
+        }
+        #message {
+            grid-row: 10;
+            grid-column: 1/13;
+            height: 80px;
+            padding: 10px 10px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+        }
+            
+            #message:focus {
+                outline-style: none;                
+            }
+
+        .form-btn {
+            grid-row: 11;
+            grid-column: 6/8;
+            color:  #000;
+            font-weight: bold;
+            height: 40px;
+            margin: 10px 0px;
+            background-color: #fbc94a;
+            border: 1px solid  #fbc94a;
+        }
+
+            .form-btn:hover {
+                cursor: pointer;
+                color: #000;
+                background-color: #eedbaa;
+                border: 1px solid   #eedbaa;
+            }
+
+
+@media only screen and (min-width: 1920px) {
+    .orcamento h2 {
+        margin-bottom: 80px;
+    }
+
+    .container-orcamento{
+        background-image: url(../images/orcamento2.svg);
+        grid-column: 2/12;
+        width: 80%;
+        margin: auto;
+    }
+
+    .container-orcamento p {
+        grid-column: 2/12;
+       
+    }
+
+    .container-orcamento form {
+        grid-column: 2/12;
+        
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .container-orcamento{
+        background-image: url(../images/orcamento-1366.svg);
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .container-orcamento{
+        background-image: url(../images/orcamento-1366.svg);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container-orcamento{
+        background-image: url(../images/orcamento-1024.svg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-orcamento{
+        background-image: url(../images/orcamento-3.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: 50px 50px;
+    }
+
+
+        .container-orcamento p {
+            grid-row: 2;
+            grid-column: 1/13;
+            text-align: justify;
+            margin: 100px 50px 0px 50px;
+        }
+
+        .container-orcamento form {
+            grid-column: 1/13;
+            grid-row: 3;
+            display: grid;
+            grid-template-rows: repeat(16, auto);
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            margin: 50px 50px;
+            padding: 0px;
+            
+        }
+
+        .form-btn {
+            grid-row: 11;
+            grid-column: 5/9;
+            color: #000;
+            font-weight: bold;
+            height: 40px;
+            margin: 10px 0px;
+            background-color: #fbc94a;
+            border: 1px solid  #fbc94a;
+        }
+}
+
+@media only screen and (max-width: 450px) {
+    .container-orcamento{
+        background-image: url(../images/orcamento-4.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: 20px 20px 20px 30px;
+        padding: 0 0 0 10px;
+    }
+
+
+        .container-orcamento p {
+            grid-row: 2;
+            grid-column: 1/13;
+            text-align: justify;
+            margin: 50px 40px 0px 10px;
+            padding: 5px;
+        }
+
+        .container-orcamento form {
+            grid-column: 1/13;
+            grid-row: 3;
+            display: grid;
+            grid-template-rows: repeat(17, auto);
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            margin: 25px 40px 0px 10px;
+            padding: 5px;
+            
+        }
+
+        #label-fullname {
+            grid-row: 1;
+            grid-column: 1/7;
+        }
+
+        #fullname {
+            grid-row: 2;
+            grid-column: 1/13;
+            margin-right: 0;
+            
+        }
+
+        #label-email {
+                grid-row: 3;
+                grid-column: 1/13;
+                margin-left: 0px;
+            }
+        
+        #email {
+            grid-row: 4;
+            grid-column: 1/13;
+            margin-left: 0px;
+        }
+        
+        #label-numero{
+            grid-row: 5;
+            grid-column: 1/13;
+        }
+
+        #numero {
+            grid-row: 6;
+            grid-column: 1/13;
+            margin-right: 0px;
+        }
+
+        #label-tipo-tradução {
+            grid-row: 7;
+            grid-column: 1/13;
+            margin-left: 0;
+        }
+
+        #tipo-tradução {
+            grid-row: 8;
+            grid-column: 1/13;
+            margin-left: 0;
+        }
+
+        #label-origem {
+            grid-row:9;
+            grid-column: 1/13;
+            margin-left: 0;
+        }
+
+        #origem {
+            grid-row: 10;
+            grid-column: 1/13;
+            margin-right: 0px;
+        }
+
+        #label-destino {
+            grid-row: 11;
+            grid-column: 1/13;
+            margin-left: 5px;
+        }
+
+        #destino {
+            grid-row: 12;
+            grid-column: 1/13;
+            margin-left: 0px;
+        }
+
+        #label-anexo {
+            grid-row:13;
+            grid-column: 1/13;
+        }
+
+        #anexo {
+            padding: 0;
+            grid-row: 14;
+            grid-column: 1/13;
+        }
+
+        form select {
+            margin: 10px 0px;
+            font-family: 'Segoe UI';
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+        }
+
+            form select:focus {
+                outline-style: none;
+            }
+
+        #label-message {
+            grid-row: 15;
+            grid-column: 1/13;
+        }
+        #message {
+            grid-row: 16;
+            grid-column: 1/13;
+            height: 80px;
+            padding: 10px 10px;
+            background-color: #3a3a3a;
+            border: 1px solid #fbc94a;
+        }
+            
+            #message:focus {
+                outline-style: none;                
+            }
+
+
+
+        .form-btn {
+            grid-row: 17;
+            grid-column: 4/10;
+            color: #000;
+            font-weight: bold;
+            height: 40px;
+            margin: 10px 0px 50px 0px;
+            background-color: #fbc94a;
+            border: 1px solid  #fbc94a;
+        }
+}

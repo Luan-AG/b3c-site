@@ -1,0 +1,422 @@
+/*----------------Slide show-------------------------*/    
+.slider {
+    margin-top: -150px;
+    height: 100vh; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide {
+    grid-column: 1/13;
+    height: 100vh; /* And also Change this parameter to adjust the slide size according to the screen-size */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    align-items: flex-end;
+    justify-items: center;
+    position: absolute;
+    opacity: 0;
+    transition: 1.2s ease-in-out;
+    
+    
+}
+    .slide .content-left {
+        grid-row: 1;
+        grid-column: 1/6;
+        justify-self: start;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 25px 5px 25px 60px;
+        margin-bottom: 50px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;     
+    }
+
+    .slide .content-right {
+        grid-row: 1;
+        grid-column: 8/13;
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        padding: 25px 60px 25px 25px;
+        margin-bottom: 50px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;     
+    }
+
+        .slide .content-left h2 {
+            margin: 0;
+            padding-right: 20px;
+            font-size: 40px;
+            color: whitesmoke;
+        }
+
+        .slide .content-left p {
+            padding-right: 100px;
+            font-size: 14px;
+            color: whitesmoke;
+        }
+
+        .slide .content-right h2 {
+            text-align: right;
+            margin: 0;
+            font-size: 40px;
+            color: whitesmoke;
+        }
+
+        .slide .content-right p {
+            text-align: right;
+            padding-left: 100px;
+            font-size: 14px;
+            color: whitesmoke;
+        }
+
+    .slide.current {
+        opacity: 1;
+    }
+
+        .slide:first-child {
+            background-image: url('../images/slide-1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .slide:nth-child(2) {
+            background-image: url('../images/slide-2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .slide:nth-child(3) {
+            background-image: url('../images/slide-3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .slide:nth-child(4) {
+            background-image: url('../images/slide-4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .slide:nth-child(5) {
+            background-image: url('../images/slide-5.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+    .content-slide {
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        justify-items: center;            
+    }
+/*----------------Slide show buttons-------------------------*/
+    
+    a#prev {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 50vh;
+        left: 0;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    a#next  {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 50vh;
+        right: 0;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    a#prev p {
+        font-size: 50px;
+        margin: 0;
+        padding: 15px 20px 10px 15px;
+        
+    }
+
+    a#next p {
+        font-size: 50px;
+        margin: 0;
+        padding: 15px 15px 10px 20px;
+    }
+
+    a#prev:hover, a#next:hover {
+        background-color: rgba(36, 35, 35, 0.9);
+        
+    }
+
+    #zap {
+        
+        position: fixed;
+        top: 85vh;
+        left: 20px;
+        z-index: 1;
+        opacity: 0;
+        transition: .8s;
+    }
+
+    #zap img:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        
+
+    }
+    #zap img {
+        width: 45px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #up {
+        opacity: 0;
+        transition: .8s;
+        position: fixed;
+        top: 85vh;
+        right: 20px;
+        z-index: 1;
+        padding: 10px 10px 5px 10px;
+        border-radius: 10px;
+    }
+
+    #up:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        
+    }
+
+    #up img {
+        width: 20px;
+        border: 3px solid #ffffff66;
+        border-radius: 50%;
+        padding: 10px 12px;
+    }
+/*----------------Slide show dots-------------------------*/
+.dot-container {
+text-align: center;
+}
+
+.dot {
+height: 15px;
+width: 15px;
+margin: 25px 2px 0px 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.2s ease;
+}
+
+.active-dot {
+background-color: #575555;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .slider {
+        height: 850px; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
+    }
+
+    .slide {
+        height: 850px; /* And also Change this parameter to adjust the slide size according to the screen-size */
+    }
+
+    a#prev {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 850px;
+        left: 50px;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+    }
+    
+    a#next  {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 850px;
+        right: 50px;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+    }
+
+    a#prev p {
+        font-size: 40px;
+        margin: 0;
+        padding: 5px 20px 0px 15px;
+        
+    }
+
+    a#next p {
+        font-size: 40px;
+        margin: 0;
+        padding: 5px 15px 0px 20px;
+    }
+
+    a#prev:hover, a#next:hover {
+        color: rgba(255, 255, 255, 0.8); /*so the button does not keep hovered on the phone*/
+        background-color: none;
+        
+    }
+
+    .slide .content-left {
+        grid-column: 1/10;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        padding-left: 50px;     
+    }
+
+    .slide .content-right {
+        grid-column: 4/13;
+        margin-right: 0px;
+        margin-bottom: 50px;
+        padding-right: 50px;
+        padding-left: 50px;    
+    }
+
+        .slide .content-left h2 {
+            font-size: 40px;
+        }
+
+        .slide .content-left p {
+            font-size: 14px;
+        }
+
+        .slide .content-right h2 {
+            font-size: 40px;
+        }
+
+        .slide .content-right p {
+            font-size: 14px;
+        }
+}
+
+@media only screen and (max-width: 450px) {
+    .slider {
+        height: 650px; /* (Maybe vh or %) Change this parameter to adjust the slide size according to the screen-size */
+    }
+
+    .slide {
+        height: 650px; /* And also Change this parameter to adjust the slide size according to the screen-size */
+    }
+
+    a#prev {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 650px;
+        left: 50px;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+    }
+    
+    a#next  {
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 650px;
+        right: 50px;
+        z-index: 1;
+        transition-property: color;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+    }
+
+
+
+    .slide .content-left {
+        grid-column: 1/12;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        margin-right: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px 15px 15px 15px;   
+    }
+
+    .slide .content-left h2 {
+        font-size: 30px;
+    }
+
+    .slide .content-left p {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+
+    .slide .content-right {
+        grid-row: 1;
+        grid-column: 2/13;
+        display: flex;
+        flex-direction: column;
+        justify-items: right;
+        margin-left: 20px;
+        margin-bottom: 50px;
+        background-color: rgba(0, 0, 0, 0.6); 
+        padding: 15px 15px 15px 15px;   
+    }
+
+        .slide .content-right h2 {
+            text-align: right;
+            margin: 0;
+            font-size: 30px;
+            color: whitesmoke;
+        }
+
+        .slide .content-right p {
+            text-align: right;
+            padding-right: 0px;
+            padding-left: 0px;
+            font-size: 14px;
+            color: whitesmoke;
+        }
+
+        #zap {
+            display: none;
+        }
+
+
+        #up {
+            display: none;
+            width: 15px;
+            border: 2px solid #ffffff66;
+            border-radius: 50%;
+            padding: 8px 10px;
+        }
+
+}

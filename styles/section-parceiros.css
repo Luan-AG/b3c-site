@@ -1,0 +1,146 @@
+/*----------------Parceiros-------------------------*/
+
+.nossos-parceiros {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    color: #fff;
+    margin-bottom: 100px;
+    
+}
+
+.nossos-parceiros h2 {
+    grid-row: 1;
+    grid-column: 2/12;
+    color: white;
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.nossos-parceiros p {
+    grid-row: 2;
+    grid-column: 3/11;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.parceiro-1 {
+    padding: 40px 20px 20px 20px;
+    border-radius: 10px;
+    grid-row: 3;
+    grid-column: 4/7;
+    text-align: center;
+}
+
+.parceiro-1 img {
+    width: 40px;
+}
+
+.parceiro-1:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.parceiro-2 {
+    padding: 40px 20px 20px 20px;
+    border-radius: 10px;
+    grid-row: 3;
+    grid-column: 7/10;
+    text-align: center;
+}
+.parceiro-2 img {
+    width: 40px;
+}
+.parceiro-2:hover {
+    background-color:  rgba(0, 0, 0, 0.5);
+}
+
+.parceiro-1 p, .parceiro-2 p {
+    margin-bottom: 0;
+    font-size: 14px;
+    
+}
+.parceiro-1 h3, .parceiro-2 h3 {
+    line-height: 1.5;
+    
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .nossos-parceiros {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: 0px;
+        color: #fff;
+        margin-bottom: 100px;
+                
+            }
+            
+            .nossos-parceiros h2 {
+                grid-row: 1;
+                grid-column: 2/12;
+                color: white;
+                font-weight: normal;
+                font-size: 50px;
+                margin-top: 100px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            
+            .nossos-parceiros p {
+                grid-row: 2;
+                grid-column: 3/11;
+                margin-bottom: 30px;
+                text-align: justify;
+            }
+            
+            .parceiro-1 {
+                padding: 20px;
+                border-radius: 10px;
+                grid-row: 3;
+                grid-column: 2/7;
+                text-align: center;
+            }
+            
+            .parceiro-1 p {
+                display: none;
+                width: 40px;
+            }
+            .parceiro-1 img {
+                width: 40px;
+            }
+            
+            .parceiro-1:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            
+            .parceiro-2 {
+                padding: 20px;
+                border-radius: 10px;
+                grid-row: 3;
+                grid-column: 7/12;
+                text-align: center;
+            }
+            .parceiro-2 p {
+                display: none;
+                width: 40px;
+            }
+            .parceiro-2 img {
+                width: 40px;
+            }
+            .parceiro-2:hover {
+                background-color:  rgba(0, 0, 0, 0.5);
+            }
+            
+            .parceiro-1 p, .parceiro-2 p {
+                margin-bottom: 0;
+                font-size: 14px;
+                
+            }
+    
+}
