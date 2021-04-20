@@ -8,9 +8,8 @@ elementClicked.addEventListener("click", ()=>{
   elementToShow.classList.toggle("invisible");
 });
 
-//------------------MENU OVERLAY EFFECT---------------------------------
+//------------------MENU OVERLAY EFFECT ON MOBILE---------------------------------
 
-/* Open when someone clicks on the menu element */
 function openNav() {
     document.querySelector('#next').style.transitionDelay = "0s";
     document.getElementById("myNav").style.width = "100%";
@@ -18,7 +17,6 @@ function openNav() {
     document.querySelector('#prev').style.color = "rgba(36, 35, 35, 0)";
   }
   
-  /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
     document.querySelector('#next').style.transitionDelay = "0.3s";
     document.getElementById("myNav").style.width = "0%";
@@ -26,12 +24,6 @@ function closeNav() {
     document.querySelector('#prev').style.color = " rgba(255, 255, 255, 0.8)";
     elementToShow.classList.add('invisible'); 
 }
-
-/* document.querySelector(".botao-overlay1").addEventListener("click", closeNav);
-document.querySelector(".botao-overlay2").addEventListener("click", closeNav);
-document.querySelector(".botao-overlay3").addEventListener("click", closeNav);
-document.querySelector(".botao-overlay4").addEventListener("click", closeNav);
-document.querySelector(".botao-overlay5").addEventListener("click", closeNav); */
 
 let btnOverlay = document.querySelectorAll('.botao-overlay');
 
@@ -145,56 +137,45 @@ if (auto) {
 
 //---------------Underline on Scroll-------------------------------------
 
-let scrollpos = window.scrollY;
-const inicio = document.querySelector(".slider");
-const sobre = document.querySelector("#quemsomos");
-const servicos = document.querySelector('#nossos-servicos');
-const orcamento = document.querySelector('#solicite-orcamento');
-const contato = document.querySelector('#entre-contato');
-
-const inicioHeight = inicio.offsetHeight;
-const sobreHeight = sobre.offsetHeight;
-const servicosHeight = servicos.offsetHeight;
-const orcamentoHeight = orcamento.offsetHeight;
-const contatoHeight = contato.offsetHeight;
-
+const inicioHeight = document.querySelector(".slider").offsetHeight;
+const sobreHeight = document.querySelector("#quemsomos").offsetHeight;
+const servicosHeight = document.querySelector('#nossos-servicos').offsetHeight;
+const orcamentoHeight = document.querySelector('#solicite-orcamento').offsetHeight;
+const contatoHeight = document.querySelector('#entre-contato').offsetHeight;
+const btnNavDesk = document.querySelectorAll('.btn-nav-desk');
+console.log(btnNavDesk[0]);
 window.addEventListener('scroll', function() { 
   scrollpos = window.scrollY
   if (scrollpos < inicioHeight) { 
-    document.querySelector('.inicio a').classList.add('active');
-    document.querySelector('.sobre a').classList.remove('active');
-    document.querySelector('.serviços a').classList.remove('active');
-    document.querySelector('.parceiros a').classList.remove('active');
-    document.querySelector('.contato a').classList.remove('active');
+    btnNavDesk.forEach( item => {
+      item.classList.remove('active');
+      btnNavDesk[0].classList.add('active');
+    });
 
   }  else if (scrollpos >= inicioHeight & scrollpos < (inicioHeight + sobreHeight -50)) { 
-    document.querySelector('.inicio a').classList.remove('active');
-    document.querySelector('.sobre a').classList.add('active');
-    document.querySelector('.serviços a').classList.remove('active');
-    document.querySelector('.parceiros a').classList.remove('active');
-    document.querySelector('.contato a').classList.remove('active');
+    btnNavDesk.forEach( item => {
+      item.classList.remove('active');
+      btnNavDesk[1].classList.add('active');
+    });
 
   }  else if (scrollpos >= (inicioHeight + sobreHeight -50) & scrollpos < (inicioHeight + sobreHeight + servicosHeight)) { 
-    document.querySelector('.inicio a').classList.remove('active');
-    document.querySelector('.sobre a').classList.remove('active');
-    document.querySelector('.serviços a').classList.add('active');
-    document.querySelector('.parceiros a').classList.remove('active');
-    document.querySelector('.contato a').classList.remove('active');
+    btnNavDesk.forEach( item => {
+      item.classList.remove('active');
+      btnNavDesk[2].classList.add('active');
+    });
 
   }  else if (scrollpos >= (inicioHeight + sobreHeight + servicosHeight) & scrollpos < (inicioHeight + sobreHeight + servicosHeight + orcamentoHeight)) { 
-    document.querySelector('.inicio a').classList.remove('active');
-    document.querySelector('.sobre a').classList.remove('active');
-    document.querySelector('.serviços a').classList.remove('active');
-    document.querySelector('.parceiros a').classList.add('active');
-    document.querySelector('.contato a').classList.remove('active');
+    btnNavDesk.forEach( item => {
+      item.classList.remove('active');
+      btnNavDesk[3].classList.add('active');
+    });
 
   }  else { 
-    document.querySelector('.inicio a').classList.remove('active');
-    document.querySelector('.sobre a').classList.remove('active');
-    document.querySelector('.serviços a').classList.remove('active');
-    document.querySelector('.parceiros a').classList.remove('active');
-    document.querySelector('.contato a').classList.add('active');
-    }
+    btnNavDesk.forEach( item => {
+      item.classList.remove('active');
+      btnNavDesk[4].classList.add('active');
+    });
+  }
 })
 
 //---------------Show btn whatsapp on Scroll-------------------------------------
