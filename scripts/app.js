@@ -27,11 +27,19 @@ function closeNav() {
     elementToShow.classList.add('invisible'); 
 }
 
-document.querySelector(".botao-overlay1").addEventListener("click", closeNav);
+/* document.querySelector(".botao-overlay1").addEventListener("click", closeNav);
 document.querySelector(".botao-overlay2").addEventListener("click", closeNav);
 document.querySelector(".botao-overlay3").addEventListener("click", closeNav);
 document.querySelector(".botao-overlay4").addEventListener("click", closeNav);
-document.querySelector(".botao-overlay5").addEventListener("click", closeNav);
+document.querySelector(".botao-overlay5").addEventListener("click", closeNav); */
+
+let btnOverlay = document.querySelectorAll('.botao-overlay');
+
+btnOverlay.forEach(btn => {
+  btn.addEventListener('click', closeNav);
+});
+
+
 
 
 //---------------SHRINK NAVBAR-------------------------------------
