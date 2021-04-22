@@ -36,7 +36,9 @@ btnOverlay.forEach(btn => {
 
 //---------------SHRINK NAVBAR-------------------------------------
 
-window.onscroll = function() {
+
+const shrinkBar = () => {
+  window.onscroll = () => {
     if(window.screen.width >= 768){
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
               document.querySelector(".logomarca").style.width = "110px";
@@ -49,7 +51,11 @@ window.onscroll = function() {
                 document.querySelector("header").style.fontSize = "16px";
         }
     } 
+  }
 }
+
+shrinkBar();
+
 
 //---------------SLIDESHOW-------------------------------------
 const dot = document.querySelectorAll('.dot');
@@ -143,7 +149,7 @@ const servicosHeight = document.querySelector('#nossos-servicos').offsetHeight;
 const orcamentoHeight = document.querySelector('#solicite-orcamento').offsetHeight;
 const contatoHeight = document.querySelector('#entre-contato').offsetHeight;
 const btnNavDesk = document.querySelectorAll('.btn-nav-desk');
-console.log(btnNavDesk[0]);
+
 window.addEventListener('scroll', function() { 
   scrollpos = window.scrollY
   if (scrollpos < inicioHeight) { 
@@ -201,76 +207,31 @@ window.addEventListener('scroll', function() {
 })
 
 //---------------Button flip cards-------------------------------------
-btnMais1 = document.querySelector('.btn-mais-1 p');
-btnMais2 = document.querySelector('.btn-mais-2 p');
-btnMais3 = document.querySelector('.btn-mais-3 p');
-btnMais4 = document.querySelector('.btn-mais-4 p');
-btnMais5 = document.querySelector('.btn-mais-5 p');
-btnMais6 = document.querySelector('.btn-mais-6 p');
-btnMais7 = document.querySelector('.btn-mais-7 p');
-
-btnVoltar1 = document.querySelector('.btn-voltar-1 p');
-btnVoltar2 = document.querySelector('.btn-voltar-2 p');
-btnVoltar3 = document.querySelector('.btn-voltar-3 p');
-btnVoltar4 = document.querySelector('.btn-voltar-4 p');
-btnVoltar5 = document.querySelector('.btn-voltar-5 p');
-btnVoltar6 = document.querySelector('.btn-voltar-6 p');
-btnVoltar7 = document.querySelector('.btn-voltar-7 p');
-
-btnMais1.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
+const flipCards = () => {
+  function flipCard(e) {
+    e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
+  }
   
-});
-btnVoltar1.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
+  function unFlipCard(e) {
+    e.target.parentElement.parentElement.parentElement.style.transform = '';
+  }
+  
+  btnMais = document.querySelectorAll('.btn-read-more');
+  btnVoltar = document.querySelectorAll('.btn-back');
+  
+  btnMais.forEach( btn => {
+    btn.addEventListener('click', flipCard);
+  });
+  
+  btnVoltar.forEach( btn => {
+    btn.addEventListener('click', unFlipCard);
+  });
+}
+
+flipCards();
 
 
-btnMais2.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
-});
-btnVoltar2.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
 
-
-btnMais3.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
-});
-btnVoltar3.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
-
-
-btnMais4.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
-});
-btnVoltar4.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
-
-
-btnMais5.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(180deg)';
-});
-btnVoltar5.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
-
-
-btnMais6.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
-});
-btnVoltar6.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
-
-btnMais7.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = 'rotateY(-180deg)';
-});
-btnVoltar7.addEventListener("click", function(e) {
-  e.target.parentElement.parentElement.parentElement.style.transform = '';
-});
 
 //---------------jQuery Smooth Scrolling-------------------------------------
 
@@ -287,15 +248,4 @@ btnVoltar7.addEventListener("click", function(e) {
   }
  });
 
- //---------------Clear form-------------------------------------
 
- function clearForm() {
-  
-  submitButton = document.querySelector('.form-btn');
-
-  submitButton.addEventListener("submit", () => {
-      document.getElementById("formul").reset();
-    });  
-}
-
-clearForm();
