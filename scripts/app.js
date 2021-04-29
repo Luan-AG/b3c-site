@@ -1,4 +1,5 @@
 
+
 //------------------LANGUAGE BUTTON MOBILE---------------------------------
 {
   const elementClicked = document.querySelector(".selected-lang-mobile");
